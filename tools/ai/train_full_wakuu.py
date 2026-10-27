@@ -19,18 +19,24 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--epochs',type=int,default=3)
 parser.add_argument('--batch-size',type=int,default=8)
 parser.add_argument('--learning-rate',type=float,default=2e-5)
+parser.add_argument('--checkpoint',default='.tools/ai/train/checkpoint')
+parser.add_argument('--corpus',default='.tools/ai/full-corpus')
+parser.add_argument('--workdir',default='.tools/ai/full-train')
+parser.add_argument('--report',default='reports/wakuu-full-training.json')
+parser.add_argument('--model-version',default='wakuu-nli-408-dev2')
+parser.add_argument('--seed',type=int,default=408080)
 args=parser.parse_args()
-random.seed(408080);np.random.seed(408080);torch.manual_seed(408080)
+random.seed(args.seed);np.random.seed(args.seed);torch.manual_seed(args.seed)
 torch.set_num_threads(4)
 device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-work=ROOT/'.tools/ai/full-train';work.mkdir(parents=True,exist_ok=True)
-corpus=ROOT/'.tools/ai/full-corpus'
+work=ROOT/args.workdir;work.mkdir(parents=True,exist_ok=True)
+corpus=ROOT/args.corpus
 train=json.loads((corpus/'train.json').read_text(encoding='utf-8'))
 dev=json.loads((corpus/'dev.json').read_text(encoding='utf-8'))
 tokenizer=BertTokenizer(vocab_file=str(ROOT/'.tools/ai/base/vocab.txt'),do_lower_case=True)
-config=BertConfig.from_pretrained(ROOT/'.tools/ai/train/checkpoint',local_files_only=True)
+config=BertConfig.from_pretrained(ROOT/args.checkpoint,local_files_only=True)
 config._attn_implementation='eager'
-model=BertForSequenceClassification.from_pretrained(ROOT/'.tools/ai/train/checkpoint',config=config,local_files_only=True).to(device)
+model=BertForSequenceClassification.from_pretrained(ROOT/args.checkpoint,config=config,local_files_only=True).to(device)
 for name,p in model.named_parameters():
     p.requires_grad=any(s in name for s in ('encoder.layer.10.','encoder.layer.11.','pooler','classifier'))
 
@@ -88,9 +94,9 @@ import onnx
 from onnxruntime.transformers.float16 import convert_float_to_float16
 graph=convert_float_to_float16(onnx.load(str(fp32)),keep_io_types=True,disable_shape_infer=True)
 onnx.save(graph,str(work/'wakuu.fp16.onnx'))
-report=dict(model_version='wakuu-nli-408-dev2',seed=408080,device=str(device),epochs=args.epochs,
+report=dict(model_version=args.model_version,seed=args.seed,device=str(device),epochs=args.epochs,learning_rate=args.learning_rate,checkpoint=args.checkpoint,
     train_pairs=len(train),development_pairs=len(dev),baseline=baseline,history=history,selected=best[1],
     elapsed_seconds=time.perf_counter()-started,corpus=json.loads((corpus/'manifest.json').read_text(encoding='utf-8')),
     limitation='Question-disjoint synthetic reference-derived development; independent authored challenge and test split are evaluated after selection.')
-(ROOT/'reports/wakuu-full-training.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/args.report).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('EXPORTED',work/'wakuu.fp16.onnx',flush=True)

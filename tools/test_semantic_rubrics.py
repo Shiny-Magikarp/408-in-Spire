@@ -3,6 +3,7 @@ from pathlib import Path
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parent/'ai'))
 from full_essay_rubrics import parts,checkpoints
+from marking_families_081 import rows as marking_rows
 
 class SemanticRubricTests(unittest.TestCase):
     def test_all_sections_keep_weights_and_text(self):
@@ -27,5 +28,21 @@ class SemanticRubricTests(unittest.TestCase):
 
     def test_no_reference_does_not_become_an_automatic_full_score(self):
         with self.assertRaises(ValueError):parts('见代码。')
+
+    def test_marking_family_splits_do_not_overlap(self):
+        splits={name:marking_rows(name) for name in ('train','dev','test')}
+        family_sets={name:{r['family_id'] for r in data} for name,data in splits.items()}
+        self.assertTrue(family_sets['train'].isdisjoint(family_sets['dev']|family_sets['test']))
+        self.assertTrue(family_sets['dev'].isdisjoint(family_sets['test']))
+        text_sets={name:{(r['premise'],r['hypothesis']) for r in data} for name,data in splits.items()}
+        self.assertTrue(text_sets['train'].isdisjoint(text_sets['dev']|text_sets['test']))
+
+    def test_marking_holdout_is_balanced_across_books_and_award_labels(self):
+        data=marking_rows('test')
+        self.assertEqual(len(data),96)
+        for subject in ('ds','co','os','cn'):
+            book=[r for r in data if r['subject']==subject]
+            self.assertEqual(len(book),24)
+            self.assertEqual(sum(r['label']==2 for r in book),12)
 
 if __name__=='__main__':unittest.main()

@@ -49,7 +49,8 @@ def main():
         assert q['rubric_policy']==semantic_policy['policy_version']
     report=dict(previous_review_only=169,new_result_scopes=len(new),new_semantic_scopes=len(semantic),remaining_review_only=sum(q['parts'][0]['kind']=='review' for q in bank),
                 automatic=sum(q['parts'][0]['kind']!='review' for q in bank),classifications=dict(collections.Counter(r['classification'] for r in records)),
-                previous_review_only_items=records,local_errata=policy['corrections'],model_weights_changed=True,
+                previous_review_only_items=records,local_errata=policy['corrections'],model_weights_changed_in_080=True,
+                model_weights_changed_in_081=False,
                 validation_scope='204 questions have grading entries; 124 use experimental reference-derived semantic checks, not verified arbitrary code/proof grading.')
     (ROOT/'reports/essay-grading-audit.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({k:report[k] for k in ('previous_review_only','new_result_scopes','new_semantic_scopes','remaining_review_only','automatic','classifications')},ensure_ascii=True))

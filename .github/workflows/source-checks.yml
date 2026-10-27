@@ -17,5 +17,6 @@ jobs:
       - run: python -m unittest discover -s tools -p test_import_questions.py -v
       - run: python -m unittest discover -s tools -p test_semantic_rubrics.py -v
       - run: dotnet build tests/CoreTests.csproj --nologo
+      - run: dotnet build benchmarks/MarkingBench.csproj --nologo
       # Full game/model tests run locally with a legal game installation, the
       # separately imported question bank and locally trained offline weights.

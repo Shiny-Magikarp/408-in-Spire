@@ -1,0 +1,635 @@
+{
+  "version": "0.8.1",
+  "date": "2026-10-27",
+  "model_version": "wakuu-nli-408-dev2",
+  "model_sha256": "cd1a655635fec6f9bb33e5b95271212fc550c816489271939ea422bdc73356c3",
+  "weights_changed": false,
+  "scoring_version": "passages-081",
+  "entailment_threshold": 0.85,
+  "contradiction_ceiling": 0.1,
+  "dataset": {
+    "source": "tools/ai/marking_families_081.py",
+    "split": "test",
+    "families": 24,
+    "items": 96,
+    "sha256": "dbbe70475ed2e379c0436621ecf21119061ae91944c37a5dc00863565444e79a",
+    "nature": "Project-authored factual claims and paraphrases, not independent human-marked student essays.",
+    "used_for_this_round_training_or_checkpoint_selection": false
+  },
+  "baseline": {
+    "total": 96,
+    "positive": 48,
+    "negative": 48,
+    "true_awards": 31,
+    "false_awards": 1,
+    "missed_correct": 17,
+    "correct_rejections": 47,
+    "decision_accuracy": 0.8125,
+    "correct_answer_recall": 0.6458333333333334,
+    "false_award_rate": 0.020833333333333332,
+    "precision": 0.96875
+  },
+  "improved": {
+    "total": 96,
+    "positive": 48,
+    "negative": 48,
+    "true_awards": 31,
+    "false_awards": 1,
+    "missed_correct": 17,
+    "correct_rejections": 47,
+    "decision_accuracy": 0.8125,
+    "correct_answer_recall": 0.6458333333333334,
+    "false_award_rate": 0.020833333333333332,
+    "precision": 0.96875
+  },
+  "reference_integration": {
+    "questions": 124,
+    "baseline_mean": 76.45161290322581,
+    "baseline_minimum": 16,
+    "improved_mean": 97.93548387096774,
+    "improved_minimum": 59,
+    "scope": "Reference text integration only; not accuracy."
+  },
+  "refinement_candidate": {
+    "promoted": false,
+    "reason": "No improvement on authored development marking decisions and one additional false award in existing diagnostic regression."
+  },
+  "decisions": [
+    {
+      "id": "ds-7-0",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "ds-7-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "ds-7-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "ds-7-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "ds-8-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "ds-8-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "ds-8-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "ds-8-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "ds-9-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "ds-9-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "ds-9-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "ds-9-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "ds-10-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "ds-10-1",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "ds-10-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "ds-10-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "ds-11-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "ds-11-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "ds-11-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "ds-11-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "ds-12-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "ds-12-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "ds-12-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "ds-12-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "co-7-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "co-7-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "co-7-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "co-7-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "co-8-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "co-8-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "co-8-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "co-8-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "co-9-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "co-9-1",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "co-9-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "co-9-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "co-10-0",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "co-10-1",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "co-10-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "co-10-3",
+      "label": 1,
+      "award": true,
+      "correct": false
+    },
+    {
+      "id": "co-11-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "co-11-1",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "co-11-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "co-11-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "co-12-0",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "co-12-1",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "co-12-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "co-12-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-7-0",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "os-7-1",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "os-7-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-7-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-8-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "os-8-1",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "os-8-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-8-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-9-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "os-9-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "os-9-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-9-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-10-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "os-10-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "os-10-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-10-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-11-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "os-11-1",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "os-11-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-11-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-12-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "os-12-1",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "os-12-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "os-12-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-7-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "cn-7-1",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "cn-7-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-7-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-8-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "cn-8-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "cn-8-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-8-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-9-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "cn-9-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "cn-9-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-9-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-10-0",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "cn-10-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "cn-10-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-10-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-11-0",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "cn-11-1",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "cn-11-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-11-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-12-0",
+      "label": 2,
+      "award": false,
+      "correct": false
+    },
+    {
+      "id": "cn-12-1",
+      "label": 2,
+      "award": true,
+      "correct": true
+    },
+    {
+      "id": "cn-12-2",
+      "label": 0,
+      "award": false,
+      "correct": true
+    },
+    {
+      "id": "cn-12-3",
+      "label": 1,
+      "award": false,
+      "correct": true
+    }
+  ]
+}

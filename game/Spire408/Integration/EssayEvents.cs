@@ -166,7 +166,7 @@ public static class EssayEvents
                 // The model has no access to game commands. Calculation runs off
                 // the Godot thread, and only this fixed rubric can award points.
                 var result = await Task.Run(() => EssayEngine.Grade(q, answers, WakuuJudge.JudgeAnswer,
-                    q.Parts.Any(p => p.Kind is "concept" or "rubric") ? WakuuJudge.Version : "deterministic-rubric", token), token)
+                    q.Parts.Any(p => p.Kind is "concept" or "rubric") ? WakuuJudge.ScoringVersion : "deterministic-rubric", token), token)
                     .WaitAsync(TimeSpan.FromSeconds(20), token);
                 token.ThrowIfCancellationRequested();
                 EssayEngine.Record(run, ModEntry.Profile, challenge, q, result);

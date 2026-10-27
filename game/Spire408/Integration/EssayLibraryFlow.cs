@@ -43,7 +43,7 @@ public static class EssayLibraryFlow
         view.Configure(q, ModEntry.Profile.EssayDrafts.GetValueOrDefault(key) ?? [], null, "无", false, async (answers, token) =>
         {
             var result = await Task.Run(() => EssayEngine.Grade(q, answers, WakuuJudge.JudgeAnswer,
-                q.Parts.Any(p => p.Kind is "concept" or "rubric") ? WakuuJudge.Version : "deterministic-rubric", token), token)
+                q.Parts.Any(p => p.Kind is "concept" or "rubric") ? WakuuJudge.ScoringVersion : "deterministic-rubric", token), token)
                 .WaitAsync(TimeSpan.FromSeconds(20), token);
             token.ThrowIfCancellationRequested();
             ModEntry.Profile.EssayPractice[q.Id] = result;

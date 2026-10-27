@@ -19,6 +19,7 @@ public static class WakuuJudge
     public static bool FilesPresent => System.IO.File.Exists(Path.Combine(ModelDirectory, "wakuu.onnx"))
         && System.IO.File.Exists(Path.Combine(ModelDirectory, "model.json")) && System.IO.File.Exists(Path.Combine(ModelDirectory, "vocab.txt"));
     public static string Version { get { EnsureReady(); return _version; } }
+    public static string ScoringVersion => Version + "/passages-081";
     public static Task WarmupAsync() => Task.Run(() => { EnsureReady(); Judge("所有边的权值都非负。", "图中不存在负权边。"); });
     private static void EnsureReady()
     {
@@ -67,7 +68,11 @@ public static class WakuuJudge
     // closest three short passages, avoiding silent long-answer truncation.
     public static SemanticEvidence JudgeAnswer(string answer, string reference)
     {
-        if (answer.Length + reference.Length <= 175) return Judge(answer, reference);
+        // Even a short multi-sentence answer can cover unrelated subquestions.
+        // Giving the whole paragraph to NLI often loses an explicitly stated
+        // checkpoint. Retrieve its own sentence before classifying it.
+        if (answer.Length + reference.Length <= 175 && !Regex.IsMatch(answer.Trim(), @"[。；！？\n].+"))
+            return Judge(answer, reference);
         string plain = Regex.Replace(answer, @"\*\*|`", "");
         plain = Regex.Replace(plain, @"^[（(]\d+[)）]\s*", "");
         plain = Regex.Replace(plain, @"[ \t]+", " ");
