@@ -1,0 +1,233 @@
+[gd_scene load_steps=9 format=3]
+[ext_resource type="Script" path="res://Spire408/UI/StudySetup.cs" id="1"]
+[ext_resource type="Theme" path="res://Spire408/Scenes/StudyTheme.tres" id="2"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireTickbox.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireButton.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireCancelButton.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireDropdown.tscn" id="6"]
+[ext_resource type="Texture2D" path="res://Spire408/Art/study_book.res" id="7"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireSettingsButton.tscn" id="8"]
+
+[node name="StudySetup" type="Control" node_paths=PackedStringArray("EnabledToggle", "DataStructures", "Organization", "OperatingSystems", "Networks", "WrongToggle", "EssayToggle", "SourceFilter", "ChapterFilter", "CountLabel", "NoticeLabel", "StartButton", "CancelButton", "LibraryButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2")
+script = ExtResource("1")
+EnabledToggle = NodePath("Panel/Frame/Scroll/Body/Enabled")
+DataStructures = NodePath("Panel/Frame/Scroll/Body/Books/DataStructures")
+Organization = NodePath("Panel/Frame/Scroll/Body/Books/Organization")
+OperatingSystems = NodePath("Panel/Frame/Scroll/Body/Books/OperatingSystems")
+Networks = NodePath("Panel/Frame/Scroll/Body/Books/Networks")
+WrongToggle = NodePath("Panel/Frame/Scroll/Body/Wrong")
+EssayToggle = NodePath("Panel/Frame/Scroll/Body/Essays")
+SourceFilter = NodePath("Panel/Frame/Scroll/Body/SourceRow/SourceFilter")
+ChapterFilter = NodePath("Panel/Frame/Scroll/Body/ChapterRow/ChapterFilter")
+CountLabel = NodePath("Panel/Frame/Scroll/Body/Count")
+NoticeLabel = NodePath("Panel/Frame/Scroll/Body/Notice")
+StartButton = NodePath("Panel/Frame/Actions/Start")
+CancelButton = NodePath("Panel/Frame/Actions/Cancel")
+LibraryButton = NodePath("Panel/Frame/Scroll/Body/LibraryRow/Library")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+color = Color(0.015, 0.025, 0.04, 0.80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.055
+anchor_right = 0.93
+anchor_bottom = 0.945
+
+[node name="Frame" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Scroll" type="ScrollContainer" parent="Panel/Frame"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Body" type="VBoxContainer" parent="Panel/Frame/Scroll"]
+size_flags_horizontal = 3
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Kicker" type="Label" parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+text = "408 IN SPIRE   /   学习与冒险"
+theme_override_font_sizes/font_size = 16
+modulate = Color(0.86, 0.73, 0.47, 1)
+
+[node name="Title" type="Label" parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+text = "本局复习计划"
+theme_override_font_sizes/font_size = 34
+theme_override_colors/font_color = Color(0.937, 0.784, 0.318, 1)
+
+[node name="Enabled" instance=ExtResource("3") parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+Caption = "启用复习与答题金币"
+InitiallyTicked = true
+
+[node name="Books" type="GridContainer" parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+columns = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 8
+
+[node name="DataStructures" instance=ExtResource("3") parent="Panel/Frame/Scroll/Body/Books"]
+layout_mode = 2
+Caption = "数据结构"
+InitiallyTicked = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(380, 48)
+
+[node name="Organization" instance=ExtResource("3") parent="Panel/Frame/Scroll/Body/Books"]
+layout_mode = 2
+Caption = "计算机组成原理"
+InitiallyTicked = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(380, 48)
+
+[node name="OperatingSystems" instance=ExtResource("3") parent="Panel/Frame/Scroll/Body/Books"]
+layout_mode = 2
+Caption = "操作系统"
+InitiallyTicked = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(380, 48)
+
+[node name="Networks" instance=ExtResource("3") parent="Panel/Frame/Scroll/Body/Books"]
+layout_mode = 2
+Caption = "计算机网络"
+InitiallyTicked = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(380, 48)
+
+[node name="ChapterRow" type="Control" parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 54)
+z_index = 20
+mouse_filter = 1
+
+[node name="ChapterFilter" parent="Panel/Frame/Scroll/Body/ChapterRow" instance=ExtResource("6")]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="SourceRow" type="Control" parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 54)
+z_index = 10
+mouse_filter = 1
+
+[node name="SourceFilter" parent="Panel/Frame/Scroll/Body/SourceRow" instance=ExtResource("6")]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="Wrong" instance=ExtResource("3") parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+Caption = "仅做错题   ·   使用本局开始前的错题集"
+
+[node name="ActivationHint" type="Label" parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 54)
+text = "按需答题：先点击战斗左侧的学识徽记，再打出想要增益的牌。"
+theme_override_font_sizes/font_size = 23
+theme_override_colors/font_color = Color(0.65, 0.89, 0.86, 1)
+autowrap_mode = 3
+vertical_alignment = 1
+
+[node name="Essays" parent="Panel/Frame/Scroll/Body" instance=ExtResource("3")]
+layout_mode = 2
+Caption = "问号事件大题挑战 · 离线瓦库评分"
+
+[node name="Count" type="Label" parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+autowrap_mode = 3
+text = "正在读取题库…"
+theme_override_font_sizes/font_size = 25
+modulate = Color(0.86, 0.73, 0.47, 1)
+
+[node name="LibraryRow" type="HBoxContainer" parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="Panel/Frame/Scroll/Body/LibraryRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "大题题库"
+theme_override_font_sizes/font_size = 26
+
+[node name="Library" instance=ExtResource("8") parent="Panel/Frame/Scroll/Body/LibraryRow"]
+layout_mode = 2
+Caption = "打开题库"
+
+[node name="Notice" type="Label" parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+text = ""
+autowrap_mode = 3
+custom_minimum_size = Vector2(0, 28)
+theme_override_font_sizes/font_size = 18
+
+[node name="Economy" type="Label" parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+text = "初始金币为 0。卡牌和遗物正常产金，不占答题上限。答对使本次卡牌伤害 / 格挡 ×2；答错不消耗增益机会。满额后本场不再出题。"
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 16
+modulate = Color(0.63, 0.69, 0.75, 1)
+
+[node name="Space" type="Control" parent="Panel/Frame/Scroll/Body"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Actions" type="HBoxContainer" parent="Panel/Frame"]
+layout_mode = 2
+alignment = 0
+theme_override_constants/separation = 32
+
+[node name="Cancel" instance=ExtResource("5") parent="Panel/Frame/Actions"]
+layout_mode = 2
+Caption = "返回"
+
+[node name="Spacer" type="Control" parent="Panel/Frame/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Start" instance=ExtResource("4") parent="Panel/Frame/Actions"]
+layout_mode = 2
+Caption = "开始复习之旅"
+
+[node name="Textbook" type="TextureRect" parent="."]
+layout_mode = 1
+anchor_left = 0.93
+anchor_top = 0.055
+anchor_right = 0.93
+anchor_bottom = 0.055
+offset_left = -205.0
+offset_top = 44.0
+offset_right = -85.0
+offset_bottom = 164.0
+mouse_filter = 2
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 5

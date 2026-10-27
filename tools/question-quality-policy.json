@@ -1,0 +1,3089 @@
+{
+  "schema_version": 1,
+  "source_commit": "267d0d815b1eee770dad12e88bbd560d08ba3f66",
+  "source_sha256": "10780692ca5402305343cc099c09c4ed803a6309da7d995cd3c88237ed4dc58f",
+  "compatible_bank_hashes": [
+    "91B4CF4F5F7CBDAF36A72F1DB624840CE8FE1B0C7C64890B91E4B7A0CB93AB48",
+    "BD0EA09DBFD76EFA8685CAC1B853A9D650BBF1C2CA618AD9AD4AB4B38CF220C5"
+  ],
+  "quarantine_upstream_prefixes": [
+    "2027_"
+  ],
+  "reason": "2027 OCR 增补批次确认存在跨节题干、答案和解析错配；逐题核验前暂停进入战斗。此标记不表示每题均已证实错误。",
+  "evidence_ids": [
+    "408-53059b12626384217e962029"
+  ],
+  "withdrawn_ids": [
+    "408-000c1f6e525093dbb7aa027e",
+    "408-003a0559606e8874487390a8",
+    "408-00a5afd77930c634c249c75a",
+    "408-00c0f38f40ec0e2e065a30c9",
+    "408-014a77163c96a7ff1d28a63a",
+    "408-01f7378d6fb8214d0b28c92e",
+    "408-0219e9b8773397b2e4fd3649",
+    "408-024231443c6a9ff07b0540e1",
+    "408-0268bff3d397c68620ae3142",
+    "408-02896df874c40cd8d045aef2",
+    "408-02ea7aa7ea7007d1506f2449",
+    "408-032f3f57a1bf308abd859f34",
+    "408-034b143f60cc23440c5eae87",
+    "408-03a5d38c75c1eccbd48e194f",
+    "408-055ec026c3661e65938776fb",
+    "408-06335e885161556e15081550",
+    "408-0651c3cc5be92664a9247a23",
+    "408-06ae5bf104a900df58f80c90",
+    "408-076361362746903ef792d696",
+    "408-08b06865c43676a53d6dfade",
+    "408-08f7c64fd4dacd1382177565",
+    "408-08fe5e8cf3a1a7c900695d99",
+    "408-09076b8c0c80b409473e5ffe",
+    "408-099e48ddc81f8a4b25c95be4",
+    "408-09de20643222520258cd5eed",
+    "408-09ef5fdfab6ca67c2d0446c8",
+    "408-0a9133046117f36012fb3030",
+    "408-0acc0ac319b04e477185d9b1",
+    "408-0ad29ec21f95a62daf9f7607",
+    "408-0b13cbedcd40bf2ee0149790",
+    "408-0b1c1d9fcf7368825c1d1105",
+    "408-0b69217ef4fd9171356f2484",
+    "408-0be1ff0af483023eca9f229f",
+    "408-0be6fdcff34ae3bd933fd677",
+    "408-0c687e9623c574db25e0faa1",
+    "408-0d71b14e580be90176189f58",
+    "408-0d793d6a67370d54cefb70f1",
+    "408-0dc423f2b6cf845b56b843f2",
+    "408-0e7b2cbafbbab5ef1d25645a",
+    "408-0e9f4f3569b47f26ab4bb558",
+    "408-0f12127c9ca9d36fee93c2cb",
+    "408-0f6089a078149aed31734be2",
+    "408-0f64a17277569eb75a820582",
+    "408-0fa9214e5ae6ca886eebc3eb",
+    "408-0fefb7e46252161df8df7761",
+    "408-103424af085bf7f8fd285491",
+    "408-11852ba4bed419e29b4848a7",
+    "408-11deb5596e42ac38e9468a2a",
+    "408-11e88c4e238365bd14305265",
+    "408-1202e8cc1fc3de4ebe85ce1f",
+    "408-12188dcaa59d75e88e8c4746",
+    "408-124ca526e4946e22b452eecc",
+    "408-12c8634b6d1899da0f70b6bf",
+    "408-132ae1bccadcd7ca63d98c9d",
+    "408-133b99fa8615be38429a9cd1",
+    "408-13cd7e8ba3be13e9bd1cdec1",
+    "408-13f5223b8aafaa247c875ed5",
+    "408-1442058f856f12677ad9567c",
+    "408-146e71242375832b7b5fe1ab",
+    "408-149abcaf5ca74667ab8f1ebe",
+    "408-14e20960c86da2878d60bea8",
+    "408-151cb0da21951debae7b5886",
+    "408-154c654c564085db4a6684ea",
+    "408-1551dedb3a90a4ef1cb1068d",
+    "408-156f94cbc377626dc94d279e",
+    "408-1643408c352f2e5fe3a57f37",
+    "408-166cd95dd15376e454f340ab",
+    "408-1678a711f2dca142247792cd",
+    "408-1678ef3aad891e6b9fe40070",
+    "408-16942177ab9d880d4c397e16",
+    "408-16fe98aa63fa534f60d0cb27",
+    "408-17ec1cb6022ea8ccc90bd6dd",
+    "408-18008c46513c27399f2a5573",
+    "408-195e49f798dbf7fa516cd4b2",
+    "408-1a3b8cbf679a826cc2bc3e0f",
+    "408-1a691226b5348f1986344ed0",
+    "408-1b973c07c026f3616be7ad58",
+    "408-1bb50824a6b8033d36c9700e",
+    "408-1bf638d56f949f5c651e69e5",
+    "408-1c3377b9cef46e05bbaaa37d",
+    "408-1c97eff5c17f5eeb3a30e5d8",
+    "408-1cb19d2f78e3ae166306621e",
+    "408-1d9aa3ade62dbc7a62715620",
+    "408-1e35a63c43c35ff3bd819dae",
+    "408-1e4443d3ad0c173cf5096f1e",
+    "408-1e5094dc1da9d368151552d4",
+    "408-1f627799a967d7b48999cbfb",
+    "408-1f88c497f6f03c98d8a4f584",
+    "408-1f9a9a4e37ae23be360b808f",
+    "408-206f743db485ea87eca1cf3b",
+    "408-20b0fe0837a6c2b6084b26cd",
+    "408-20f1540ebf1ea9c857ca303a",
+    "408-2138dcd0b064a22e719c7f7b",
+    "408-21418a6bf5e96d7ae57b4f11",
+    "408-22fcc62ff9ec21bd054a25bc",
+    "408-22fe248079e49081c83be113",
+    "408-2315df6cac3d18a6cdb591f2",
+    "408-239393318b1890d4ea82ac03",
+    "408-240cb23e2a59ec5b950c9392",
+    "408-24919707a671a33119a26cb9",
+    "408-2494fc95d5c32fd4ca8c0e09",
+    "408-249a2674a6356d6c346ae95d",
+    "408-24b5e4f204f3776c8563d2b8",
+    "408-2538320ef7048f27f51430db",
+    "408-25612420f92b595df74ca5b3",
+    "408-257dd2cd86d136f56bc514cf",
+    "408-257ef6bc080ecc8b31028adb",
+    "408-25ea1f7f61960349fbf2199c",
+    "408-268774a6882d45134ca0a91c",
+    "408-275a4b789ec5a9c7e4b95c58",
+    "408-2762ef3242f08a12a4253bbe",
+    "408-276eacdc764bb332a41db521",
+    "408-27d56016b1a0bf1a6b047cc7",
+    "408-293bd94ff4a2d7735f44fb6a",
+    "408-29bdf8a3c1a71763f8d94887",
+    "408-2a0802ab48e45716eb05276f",
+    "408-2aaba7c17befd526291bba13",
+    "408-2ab291268373e9fb0db889e1",
+    "408-2ab45304b0b24e78b6235021",
+    "408-2baf06a8a132505ecbd1f0d4",
+    "408-2c42d236d876a5c7d732910c",
+    "408-2c6344b16183f8ecc4c3281c",
+    "408-2c65bad9bfa2b03dad5b8099",
+    "408-2cc6dfdd13f368730c69629d",
+    "408-2cefbeb1c5ed209a79fb7f12",
+    "408-2d98cce31707ec0cefc69b30",
+    "408-2e44e527bbe51f74903f654b",
+    "408-2ea8600606b993e11f62c53e",
+    "408-2ed15caf9f467e0cb98aa74e",
+    "408-2ed7698e33465530e5988323",
+    "408-2f04ea2bc6903a55d6424647",
+    "408-2f2df59f3c0527a5fee73d95",
+    "408-2f67daa6416c2db858d17ae4",
+    "408-2f8eb49d177530c98e7d115b",
+    "408-2feb09ad269471add3740c0a",
+    "408-301262f50f0614afc0e8de6c",
+    "408-30461ab7c3d1526acb7ca08c",
+    "408-3076e06ae44d77f53682a971",
+    "408-30ad07a8d8db5addc4d0469e",
+    "408-30fc8c3a08f8554d2bc37277",
+    "408-310b0c65bd0da3fee99f8a21",
+    "408-31aa8971f9bb699b0969cf28",
+    "408-328bc0fe4fea5beb63cdb380",
+    "408-33231f3558318df6a2ea0d02",
+    "408-337e8796ba41c2859b66bb53",
+    "408-342849896466fcf597c59ef6",
+    "408-348cbd6434ec6720d30ad6ab",
+    "408-34be62f6a1c2fda5840686d3",
+    "408-34befd1aaf708803ec8af844",
+    "408-3566ebaec54a93c1738da89c",
+    "408-35d3244fe14194d7bdb34410",
+    "408-363c1553598bb6f182cb3f15",
+    "408-36a72a8e3a389940a392a76d",
+    "408-36d4d0aedc640595bd048224",
+    "408-36d8dafc2b7b6e63ded7e709",
+    "408-37a09b1fa6d547967cf64c57",
+    "408-37dc892face51b08b0eeab36",
+    "408-3893eb581f9027c2cbdbc1fe",
+    "408-389f27a838a054829262996f",
+    "408-38bd4c28c2609a115616ba7b",
+    "408-38ef12a4c645cf91803b303f",
+    "408-39585bc8c7e5f6b6a0da11f6",
+    "408-39e4e3bbd1093ecc448cfd84",
+    "408-3abe4fa1d8c5543f12ef4f5c",
+    "408-3afe8c974ccdebce50a62792",
+    "408-3bc9260a3d9a447abcb81664",
+    "408-3bcb7c0b44a0aed5ec8ab4ce",
+    "408-3bcb9f0e1906eaea0e4c706c",
+    "408-3c0204ee19fde271faedeeeb",
+    "408-3d163f6fd2611bde27c82e05",
+    "408-3e63c0657641ca80fb5b80d6",
+    "408-3ea39d592fc6c21ec1a3c298",
+    "408-3ef4f8942711caa66c7188ca",
+    "408-3f0abb462ae8b6c319a60e7e",
+    "408-3f27d328b7ddaec14931a2f8",
+    "408-3f5627e4c2f3d33014e8e81e",
+    "408-3f82d5d5d073881b394c000f",
+    "408-3fbed85f1cfa73428ee9899c",
+    "408-40938f004268984b5474e258",
+    "408-409f5c606d251aabe5ca987e",
+    "408-40b5f0536e9e7ca5dd08855f",
+    "408-40bc15dc0882cb3bf6a57daf",
+    "408-40c19b910d879a28a0ccf14f",
+    "408-40fd7f643fe5c46576ea0c40",
+    "408-419b4d045f1dd66fde442f03",
+    "408-41f9d43dc77b2fc4c788b913",
+    "408-4235d03ba200b34dd0366d6d",
+    "408-42d2483688a25d3228480feb",
+    "408-438aa306e430a04b4fb1a2c7",
+    "408-438f0f43b4c02b9f518d65a3",
+    "408-44119f3e30c61f5527e1dd65",
+    "408-443a33c5904690110e70313d",
+    "408-446d4d18cd38a6493e61abbc",
+    "408-44b17178487930f6607832d6",
+    "408-44e134d04f2345bd300c4f0f",
+    "408-452e52504bb7267215536b12",
+    "408-455406d2b5683190e0ec65f6",
+    "408-456fb2f0ab29cc0670e4a3f9",
+    "408-45ca38632c345b9659104b85",
+    "408-45de0cde1d151a522d217972",
+    "408-45fc799d1d31697ecae367b5",
+    "408-45fec563cc87c6db5461a2a2",
+    "408-475a741460cfedfabe93bddb",
+    "408-47aad06ac5d1d4665705e533",
+    "408-47af6b541518a0ceefcea444",
+    "408-4817876c4db79b574d0ae9ef",
+    "408-4847092e69895d7e92be13d6",
+    "408-487924a1b39b5d1d0770a45c",
+    "408-49750aae7d8bcb3817c6d02d",
+    "408-497b8ae2fdc29a0e0f4f335b",
+    "408-497e38ed2ebba4c14fa389fe",
+    "408-49a8e72b5dc87f27a2f793b5",
+    "408-4a51523637d9dd5954d6219b",
+    "408-4aa6968b95b8dc54687a8d06",
+    "408-4b5f283822f5d07ff376bdde",
+    "408-4b699c9130b8a6f2285747a5",
+    "408-4c48406b7e3fb368ff1a4bdf",
+    "408-4d09e148979fa4891cc206a0",
+    "408-4d240cf6c6ac856159b5ce50",
+    "408-4d244bcfc960fc2070d2e82d",
+    "408-4d2c998c7fbf43d010580bfc",
+    "408-4d5ae81cf341c0ba7d1611c5",
+    "408-4dbaa01f101712072d3a2fcd",
+    "408-513b38632d6607e913fa76ac",
+    "408-51718b74d95069d3aa5cb015",
+    "408-517358f7b8a662219c5014ee",
+    "408-533d137b5e12c8aa2b52d7ea",
+    "408-542fb84b7eaea2eaba0291c2",
+    "408-5489f434f7d4f30c2485c4bd",
+    "408-550565d18a41144b8a2ce3a7",
+    "408-55ba8781af10f951c3bd1e44",
+    "408-56c73fc481e355d48c3f4cf7",
+    "408-57557b659b0ae14414eed321",
+    "408-575adc598acaf4915164cc38",
+    "408-580cd6a3a55a8d7694e30d4f",
+    "408-5830af7054f4380fbca2de9e",
+    "408-58417b5cd0c8ef491784ecf5",
+    "408-5924746c57117ef39cc8a460",
+    "408-594341eda3d574f5e3909e7b",
+    "408-59b832b777e87908f294756a",
+    "408-59f71e74833e6d157b985015",
+    "408-5a71ca05282d69dbe8c37494",
+    "408-5ab89d73fe4d87a4aad78764",
+    "408-5b809bb8dd37e705d37305f9",
+    "408-5b9e00a95af9c565f2152a57",
+    "408-5bfa43d77cd5723985787b74",
+    "408-5c1f3da617701da6a3f192e4",
+    "408-5d4c48fc499758a4933fe0da",
+    "408-5d793c7659c243c8cd149eed",
+    "408-5d88f18a6bf493d633d08e63",
+    "408-5d957d9fe86365efad9509ec",
+    "408-5dd4aa01271db720eec865b4",
+    "408-5e829a7f0ba018ebb497490d",
+    "408-5e99bb496e7cd60fcbda2804",
+    "408-5f011588bcc19e7405d493cb",
+    "408-6050d8c801213f0dd1c10a7a",
+    "408-6066fa7cf7048671fd6d54d8",
+    "408-60d91c66d8511b41af0b3a5b",
+    "408-61ca790ec2b70142ac0e9b09",
+    "408-61ccd6eea1554f7074ffc2f4",
+    "408-62b216803834de8723b2da89",
+    "408-636fdf7e4d9c293ae498e7ff",
+    "408-63aacaf2d07179bae46186d3",
+    "408-6413064bb38848c18c7f5eb3",
+    "408-6436ded536458388b06d486e",
+    "408-647834433a5644bf6fa0be5e",
+    "408-64926d495362211b2005f644",
+    "408-64d4bca5bc26b6181580825e",
+    "408-64d755534e09df088026e77a",
+    "408-65f433e53fe96a1d2503fc73",
+    "408-669876fa96e72a1667868239",
+    "408-66bf45cad96136c4c14f0bc9",
+    "408-67362931199a0411356a6c8f",
+    "408-6842f23dca02b8c44cf9c2fa",
+    "408-685b806ed9eda3ae106ffe74",
+    "408-6888299490ecc08e70180cf8",
+    "408-6908d39a5328fc3da1fb8a36",
+    "408-690e9ac9bf2866054127749b",
+    "408-6938f275400d0e37e4b3fce9",
+    "408-695af856b893cd73c0bbbba3",
+    "408-699b687e9accba918e2994b4",
+    "408-6a073cb9f5809fd41d1ef93a",
+    "408-6a2b5139b0a860b4f1dbd2b3",
+    "408-6a3ebc85145fc8d81540cc1d",
+    "408-6a6496f6dc9f29d7f90d7b6f",
+    "408-6a90c74d9e1685bfd0415a82",
+    "408-6b76260e5995cc6dd40041b0",
+    "408-6b9d7f2da4ee389e2833986d",
+    "408-6bb4c0d6a7b53b01a97295bf",
+    "408-6beff748c5b381636c289be9",
+    "408-6d8df9b871fee56a50736922",
+    "408-6da951ca1046fc53bdb5b005",
+    "408-6dc3ddc8dd23ca407f851eeb",
+    "408-6e3ea86d9014172e081e85c0",
+    "408-6e57718ac980fc366229603f",
+    "408-6ef8cb3b4546c1a1fea99735",
+    "408-6f03a546e9494db715eceeb2",
+    "408-6f671c41f949281a5c40a1f0",
+    "408-6f80824d26fe60be5eb31ed2",
+    "408-6f9a3e9e9d7a455cf059bd42",
+    "408-7041923230469c5c36037f9c",
+    "408-716a1c5e34959ab61fecea2f",
+    "408-7188e847cb2b7991b0437bbc",
+    "408-728200cad74869e864ac1872",
+    "408-72ad585cb1de585c26681153",
+    "408-72afa77a1d3d2c19f0084c2d",
+    "408-7339951f4635810a822ff7ca",
+    "408-7374aba84e076fb3bc12d507",
+    "408-739d5f0269d56316e25257f9",
+    "408-73a504f4f0f7e9e7b709a639",
+    "408-74557b8e21f4f1e1b2485de9",
+    "408-7482d1a2c5ca89936752eb35",
+    "408-74c12a628892f16a63f0e403",
+    "408-75054e75a2feaadb90768bf2",
+    "408-75a4b6006dff8ba3959f30c2",
+    "408-7624b9796ab22bfc5cb2c345",
+    "408-76629e9713388a58410b1141",
+    "408-7663b676ebf1adae4a295f05",
+    "408-76abf00a19a616146664fd29",
+    "408-77068f6d72fafbbe6eb25bf3",
+    "408-77094bd611f67ff939e6ad63",
+    "408-775f510f693a6f4bd0221912",
+    "408-776cfbf8bf09436e68b68b9c",
+    "408-77fe7f0d077ff85df7295221",
+    "408-781511af4b1dd201484fe8f9",
+    "408-78301c3786dd6f25071d95c9",
+    "408-784f19ef5e29ea235c76c3ac",
+    "408-788ffc087d998a45cbce5204",
+    "408-793968ff840ae75d75081981",
+    "408-7958f2c514ff58d2326100dc",
+    "408-7b05cc09d08d9f991143c722",
+    "408-7b37958d735e1f5c96dee271",
+    "408-7b394125257512bbf6576d01",
+    "408-7b80f97e0e1dc101bf689a93",
+    "408-7c3e74863ed00fb101872041",
+    "408-7c457ba57e8532b635d632f3",
+    "408-7c6d5bce8caa38bff78ca56b",
+    "408-7d6a00c7b053eba582c94da8",
+    "408-7e213a79ebf744077d5c9fa7",
+    "408-7ec844cca59711a9c3072261",
+    "408-7f42af46d491e2566eab1261",
+    "408-7f8f0f68800259b46b7739ba",
+    "408-7f922063bce528a61df23697",
+    "408-7f9cabe2572c5e8a043c7a53",
+    "408-7fbff82d2b1775e9bb58894b",
+    "408-80beec9bc7bfa86d359681fe",
+    "408-811fa15db3b70dbe9003e74b",
+    "408-8150971ed4e9061acccb5d92",
+    "408-8221b443a31560ca5abcffe1",
+    "408-834e735e691a50ea48670d34",
+    "408-835a9bff4911d01cf6947339",
+    "408-835e49d9680a832e0727e792",
+    "408-83c0c293079fdb3c6f20de8e",
+    "408-83ea842f017ec0c046d2af9d",
+    "408-84583a6868975c0ad1d4e86b",
+    "408-84c340e8f4ace89ba3a33049",
+    "408-84f740a40153978718c8f47f",
+    "408-854929dce9f45c273e38ef20",
+    "408-86253d6d53153af5c6ea189b",
+    "408-866fe2aa22d633489230d824",
+    "408-869f244aedd32d0ef66ab86f",
+    "408-8722976f6b9c0d970acd77cc",
+    "408-875ba892e404acafa576350f",
+    "408-88378e92822720e54a268152",
+    "408-8881b0464ea84654ba88a54b",
+    "408-888c9b1905b531f2cada2b34",
+    "408-88f8b5e5ad5ba99af61a2de3",
+    "408-892056cca186070aa2b7ea88",
+    "408-8a19f3b8545bdceffddc7896",
+    "408-8a2d3bc50bd7f9d68e12bf4f",
+    "408-8a60d3c14e6bfc7ca6f0e309",
+    "408-8a63945f39b14e6408348428",
+    "408-8b1b359abf07a97f9e564a04",
+    "408-8ba024309ade1255a2dc3e36",
+    "408-8bef618a40b42d5396270a05",
+    "408-8c019d7829bd947e0d043aa7",
+    "408-8c39586990ed387c0be66327",
+    "408-8c5302c0ecca089bcdef2477",
+    "408-8d76024eac3cf0d54ffc9a24",
+    "408-8da220dab87b2d53ad3c4f21",
+    "408-8db93dd81e3eba81456aa365",
+    "408-8e0d47864393df085910806f",
+    "408-8e2b06864d1e2647cafecb2c",
+    "408-8eab94f5004e3f4c3c144b2c",
+    "408-8edecdaf98982743031d71ee",
+    "408-8f076430049389fcc9f77132",
+    "408-8fe115871a7d4c471999168f",
+    "408-90259c3d274fc49d40fa0606",
+    "408-903d3d516c076e201d6ef9e7",
+    "408-908aed69e32dc0c15067ccec",
+    "408-90d42b66d675a0cadac0eb15",
+    "408-91c26e114e2b496257e54a7e",
+    "408-91e67d4a77911e6f5aed228d",
+    "408-9242690fa870ef9df864207e",
+    "408-926e1967928aa322eb88beaa",
+    "408-92eec7ce9215648294745e27",
+    "408-9387257b77c31f5f821f460d",
+    "408-93a9c581a8544c3c324d1cc3",
+    "408-93d253e5443b2e2b92c55319",
+    "408-945343035eb707f95727c43c",
+    "408-94a93c4f973e576f1771b990",
+    "408-94f419be54d503fcb1904ad8",
+    "408-9679893c8ef362aa66f91a4d",
+    "408-9691da97eb3890717c888887",
+    "408-970c6558cd1a35b08c45350d",
+    "408-973aea0da53c1f4455f94ff2",
+    "408-978dbd8a1a2e8f05a3fb266b",
+    "408-97ba36fad824adc6c3c19364",
+    "408-98396e1612f5378f6173ca70",
+    "408-989046144c01cf475b123a60",
+    "408-98d2ff73b29ee591ed846701",
+    "408-99459761d3b773415a1bc93d",
+    "408-9949a21117f50f0f646b2622",
+    "408-994c0b2c3063975c69571200",
+    "408-9997c26ff0d2535f2fcb9d78",
+    "408-99d0e30618b433e7b7cd633e",
+    "408-9a0414103a285bbbb5a6bce9",
+    "408-9a82bb42e13bf67c7089548d",
+    "408-9ad7a326d1112a11298d3ebe",
+    "408-9b2876e65eec0a02739dd704",
+    "408-9b362be696ea330377e6ee58",
+    "408-9b429c875b93c9d1e3fc8628",
+    "408-9b45ecf286736ebe0a4d65e5",
+    "408-9b8c3e8636846f9c7b4b002e",
+    "408-9c1820986c989f58e04d465b",
+    "408-9c5235bec881349cfbd544a5",
+    "408-9c9c298f9f619fd54715b907",
+    "408-9d28fe0a70b78889103aebdf",
+    "408-9d8b1ccf731bd8f09faaadaf",
+    "408-9e0d25228a359333a64db863",
+    "408-9eed6161ba1c7c7a9f4388d2",
+    "408-9f347fdb6275e482224dda39",
+    "408-9f62ab922fc9cb83cd3953a6",
+    "408-9fd1680bfac2c35a47675948",
+    "408-a066a6493e27ca8ea95ef124",
+    "408-a0a4b95d2c32bc4db57f5ad5",
+    "408-a0f74e65a6aa8b8a6939cfb3",
+    "408-a15fcda3f1d0583ca50e94b2",
+    "408-a2151148301033c60ab7aab6",
+    "408-a293944e0bb25d7a0f23c0ac",
+    "408-a29ca5734548f8f009688c5b",
+    "408-a2f987536365513682042e58",
+    "408-a33362bf05b2db8b8f3dbd7a",
+    "408-a3cd47a465dd16c288194629",
+    "408-a4db716e4cfb700cee98336a",
+    "408-a4edd006a848f575cc86a818",
+    "408-a5070a730a7871055044e715",
+    "408-a54812618e84d771ace92f99",
+    "408-a5721f2feb65f260f8e9556f",
+    "408-a592c451d823b3c55665f03f",
+    "408-a59eac9bc69a83a5392eb1a2",
+    "408-a5c526e66ede055d001bc57d",
+    "408-a5f9a02124f34452990ba812",
+    "408-a618c103f7c4af07ab6caa06",
+    "408-a624c1c82bcdb82979041834",
+    "408-a6f7c08b96fe1405a209bdfa",
+    "408-a7041fa3ddd4656ae25433ab",
+    "408-a76e06a42f7a65598975ab8e",
+    "408-a7885b2deb0d8f704c4a2a1c",
+    "408-a7c18dcf212a0b429fcf7793",
+    "408-a7d0a128fb96be3ae61abde8",
+    "408-a81b6de5cfae9505d8f21707",
+    "408-a88d6881fe6d81e84abab051",
+    "408-a91177b634eddc431b097e18",
+    "408-a914a31b5b72d0f0ad3a8f9b",
+    "408-a9479583f591905f5985892e",
+    "408-a98e2b9c590575414e25b5f8",
+    "408-a9b3556cb86481341713b0bc",
+    "408-a9c9ae874fa033f1bb373dee",
+    "408-aadef6bbc7eb7a3b471e1e19",
+    "408-ab7a1a2b4c42e3b267acbee5",
+    "408-ab80d6d9d3dba88655a53a9e",
+    "408-abdabd3de6dd24e4d4e531cb",
+    "408-ac2f53db7df5521f1ab18f95",
+    "408-ac8984c6e40ea31c85b0bfd6",
+    "408-ad2b3621535e2535dfe470d2",
+    "408-ade912ce24d45dbf6a2614af",
+    "408-ae048083803021735ecbc542",
+    "408-ae8bc6fc6bc3ec086bbfc3e0",
+    "408-aec566a74e792af42351977b",
+    "408-b0147322f44d0bd2e5dc5034",
+    "408-b0941a7ac801f45cfc200b21",
+    "408-b1528db49ed88c5505cdf1d4",
+    "408-b173044546d3f86a1989536a",
+    "408-b1cd9470b2c90197d28a3191",
+    "408-b1eff4fa37224e120b8c598a",
+    "408-b23cac98effbfd3940f72024",
+    "408-b2e62eefa4554086d41d8339",
+    "408-b4115620cf1dcd88f08b4e57",
+    "408-b4593a668e6041fa2c17ddfc",
+    "408-b50de916d6af1671fef0434b",
+    "408-b5fca5a9436b65e76588d51d",
+    "408-b73ef7c32e3a67250571e223",
+    "408-b8870d0d61e27603c2b716c4",
+    "408-b8b1509246cb4a110d536f87",
+    "408-b94a56771ff4cd61be3c049d",
+    "408-b970b5864e0ca1cf8b17b030",
+    "408-b9758f963abbb9fcb5a0f754",
+    "408-ba7891e175f504ae09337e6d",
+    "408-baa14922501e4f10a185b183",
+    "408-bb3f64cb1ef6765f9c50f0ed",
+    "408-bbaf8c2995f41a86c802bf10",
+    "408-bc35dca7e3264f0c8a5175d8",
+    "408-bc5e5fd5cd5b6de98918ce1d",
+    "408-bc633d48976a7d1bd8c9a34a",
+    "408-bcbd314acfe763451ec77f61",
+    "408-bcc308b06b87cbf7e6a89dff",
+    "408-bcd9b530e501de253444f231",
+    "408-bce7f692217dc874added2f0",
+    "408-bd7f0de339fc49922939414d",
+    "408-bdd87f16048c0e04ca7a4eda",
+    "408-be71c73939c81c937de33b19",
+    "408-be71f6b222cf91e4a7786ff1",
+    "408-bf2b7099004cf5c733b7e943",
+    "408-bfa2af1a9114a830336bfb52",
+    "408-c0cb9a9e78ef0aecf0f31657",
+    "408-c2e1b163b01df4cefdca3898",
+    "408-c2e29117a124c4197608e3e4",
+    "408-c31fabc9e0198971ea954717",
+    "408-c3202156351f43fa1cfbabf3",
+    "408-c3f920f61d55313b6e1409a5",
+    "408-c49752f6b00a6b50c79fc293",
+    "408-c5384d5a62c22e7c4f92ae04",
+    "408-c5af597cb997aaef2d765393",
+    "408-c5c7a5463866f02578a91164",
+    "408-c60520a6bf78ee1e9eb7af70",
+    "408-c84620de1e8e847eaefe9e35",
+    "408-c898bf4beceac2675a5f3f91",
+    "408-c8c502640425ddf3823f7da1",
+    "408-c930d189a2032e5daf32a5cf",
+    "408-c932c95bee1e010d17da97c1",
+    "408-c9f2b9c1240e314a759b8fd5",
+    "408-ca0d1f7ada32bf77480ae6ed",
+    "408-cae167374c9c2983f5c665d0",
+    "408-cb0e6ab31383cdb5445e76f8",
+    "408-cb88b2b3803d28f62d726b55",
+    "408-cbc1753b1b2ebe6f9ff41df2",
+    "408-cbed2edbf38c9905fa7c43a4",
+    "408-cc09bc8df63e5519de28b2f1",
+    "408-cc1bc1bd1ed4cfb7f4629225",
+    "408-cc8e9ee5396c6181e3e67a5b",
+    "408-cc91fddec3c8762ce6b63454",
+    "408-cd5ceb9a26188e0168b97851",
+    "408-cd97775566ac2c62d20374be",
+    "408-ce00124c85f45be2b72efdfe",
+    "408-ce3255e7b61a89e16b93f7a5",
+    "408-ce9fecca7fb0dfa6773baf4b",
+    "408-cec72a19605a6781693ed5fb",
+    "408-cef2b600112c2780e0a39fe9",
+    "408-d032abd5e394e108aa45ce3e",
+    "408-d065b22683b391d87db122c5",
+    "408-d106d60e1a00c6f3feb1da92",
+    "408-d128b27ba0baff6859e3286a",
+    "408-d1c7651dbe7ea5bbaaede28c",
+    "408-d1e64906c83a95b54751693a",
+    "408-d1f9f4657d0d6553eb23a7fb",
+    "408-d32a8537044755a0a15b9d33",
+    "408-d34893af58b19cc6ee288ec0",
+    "408-d36a2c1789f4ad9f2a5e46f3",
+    "408-d381f71ed2ae95076286790e",
+    "408-d3ab938f8d03959509d40b49",
+    "408-d446dd3e77b540afd561356b",
+    "408-d4b4d4669fb095dc2c4adbcd",
+    "408-d51646046676a75b7bbc3ff6",
+    "408-d5d854531e3e24570e958616",
+    "408-d5dd1250d5ae25c2db124e0e",
+    "408-d5ee69e20b3358c9c8de5a1c",
+    "408-d5f56121aaf8bf167eaae0eb",
+    "408-d635af653073d67d5768af36",
+    "408-d646ac9cdc9db820332a7bb4",
+    "408-d672e1fbc996e975d7f82223",
+    "408-d6894e666be4f47b2de827a1",
+    "408-d7ba8d66459372034c3b643c",
+    "408-d824b5ab2117da7589923eb2",
+    "408-d8d762255efeefbba31d71cd",
+    "408-d93232889f10e89dc0cfc9fc",
+    "408-d94c54596d4d4b34c9769aee",
+    "408-d9929ca1689e6440c4b23d0d",
+    "408-da6f4ec1d1d2af6078aa3346",
+    "408-da93e119cce0dba284d027a1",
+    "408-dad874eb76c8c8a40435240d",
+    "408-dae649c2a2dff4d0f615cdd1",
+    "408-db822b8bb583eb4ded654118",
+    "408-db85bb8301ab05fe10d99416",
+    "408-dbc87a28babbdf5f3d737a80",
+    "408-dc4843bb419e85b25373761e",
+    "408-dc63303552cc8d85424fef32",
+    "408-dd631a3eebb45fdd1bed7db9",
+    "408-de237feff897eb7a8ccd6aff",
+    "408-df144a2f0ad19775a12e3bd3",
+    "408-df39be230e21953a8efa9177",
+    "408-e0b461797c899280251325bf",
+    "408-e103bd46eaf356cedb8ca15d",
+    "408-e16d8c5558298d47ee8f00f9",
+    "408-e1849ccc966c5653e4d491ea",
+    "408-e1b9323ecf3673a1b7cff427",
+    "408-e21f838fb6aca07a7893873b",
+    "408-e3588b8936fe129d621d6004",
+    "408-e3f0894359eee6912d46c9b5",
+    "408-e4364a11e5235015949f9983",
+    "408-e5366f3f500bfd37c4d4eb02",
+    "408-e707f46d08f86ababcf324c0",
+    "408-e7bf571d785258957f86e507",
+    "408-e863a37058ace1925e5cf778",
+    "408-e882ea10edebf5d3fc9e92b7",
+    "408-e90a916d04a1e0d424ed0fb3",
+    "408-e97b36dfb30f1e46612cfa80",
+    "408-ea266d437265ff1680d9871a",
+    "408-ea2c8bbaf7061cf2e5e38ff0",
+    "408-eab803455b86c4d8c6156135",
+    "408-eb65ed8c1002b077487d54fd",
+    "408-eba3c91ed108c098c90e7b1f",
+    "408-ebd35d701fd29a83c9c45b3a",
+    "408-ebfa44a31ce583990f05c259",
+    "408-eccf391c774f7afdd4fa3461",
+    "408-ece5830a39b27f43d672cc0f",
+    "408-ee2c53915831ef7843d5412c",
+    "408-ee3200f741d789a58cda526e",
+    "408-ee533cfb15be4df193b4170c",
+    "408-ee6fd0d2e0944c145429d46a",
+    "408-eeb5e153e36d987fa4b76a85",
+    "408-eebeb9b998e74ee84c4cbdd8",
+    "408-ef034a28186cca33424f3231",
+    "408-ef898f890f2cef826d4b73b0",
+    "408-f017ab9bfed9a9fb8dca4913",
+    "408-f040147b873b25c357567df8",
+    "408-f0d42220cc859e859fd8bcd7",
+    "408-f144dc537a21e6d8bf82be1e",
+    "408-f184981abb9d168fe4b12c72",
+    "408-f2219c8e5bb285f4f506f2a7",
+    "408-f24c51d6c2820f558a4ccefb",
+    "408-f2d9d53a6cfdb87efab817eb",
+    "408-f30259e004f1bc985405eea4",
+    "408-f3422554acd5d9afa254f0ee",
+    "408-f3f02c20999b43ea404e4c92",
+    "408-f4467c539bd0d7510e6546ea",
+    "408-f48d6c97b62381720ef2215f",
+    "408-f4cb4f439a56fcc9bf703c75",
+    "408-f4fa3abdf596fdc7db2d5fd7",
+    "408-f55bcf12435e68de06936b64",
+    "408-f57f80797e0d2c1a07f4ecbb",
+    "408-f582a5e1de545b0cd8ea72e5",
+    "408-f5b69faa807a7150108df286",
+    "408-f5d1d96fa1752bd23ab8ab07",
+    "408-f61f9756e6652e24690af0fc",
+    "408-f7177753cf215fefbfe20bd8",
+    "408-f72f8a8aeb2f01eb98ebd7b0",
+    "408-f75be8e6d63048e9b1638701",
+    "408-f8622e5dab4c7496c1e644ed",
+    "408-f8a2d257238599b7433d4cf4",
+    "408-f8b93f044e68f8e6a8620f38",
+    "408-f92f47b2cedb03e3b25d5c45",
+    "408-f96ce7571fcbb2ae2e8b0269",
+    "408-f9e4eb48f10278d4cbabbe2c",
+    "408-fa574d0999097b0c669fcb66",
+    "408-fa85fa1e2e33a367ebca51a0",
+    "408-faaa84132f1d29281ba5791f",
+    "408-fbbe5b930f7bab4a26edb6f6",
+    "408-fbff93e16d3db3ec48b3d023",
+    "408-fc9274e225de346d5f51d472",
+    "408-fce088233271ce0c9db9ab74",
+    "408-fd80cecaa67c86fba5ab3895",
+    "408-fdc1120e5c1e62f570dd2417",
+    "408-fdc8793aa03a6df283ef9918",
+    "408-fe7f01a1e5b3c0cbf6143bf6",
+    "408-feeaccfb32b014769c5df0f5",
+    "408-ff86d737be9e2cd36f82f386"
+  ],
+  "corrections": {
+    "408-53059b12626384217e962029": {
+      "upstream_id": "2027_计算机组成原理_4.1.6_09_79727a6790",
+      "expected": {
+        "revision": "d1cf169c45f10206",
+        "answer": "B",
+        "explanation": "缺页是CPU在执行指令过程中进行取指令或读/写数据时发生的一种故障，属于内部异常。"
+      },
+      "answer": "D",
+      "explanation": "二地址指令包含两个 12 位地址码，操作码占 $32-2\\times12=8$ 位，最多有 $2^8=256$ 种编码。已使用 250 种，还剩 $256-250=6$ 种操作码前缀。单地址指令少一个地址码，可将腾出的 12 位扩展为操作码，因此最多还有 $(2^8-250)\\times2^{12}=6\\times2^{12}=3\\times2^{13}=24576$ 条单地址指令，故选 D。",
+      "verification": "根据定长指令的扩展操作码前缀编码容量逐步推导；32 位字长、12 位地址、250 条二地址指令。",
+      "reviewed_on": "2026-10-23"
+    },
+    "408-1bc0ff873444a5c247b4509c": {
+      "upstream_id": "2027_数据结构_7.2.4_22_48650f8ed2",
+      "expected": {
+        "revision": "05941b45746a0832",
+        "answer": "C",
+        "explanation": "观察题图，从 $V _ { 0 }$ 到 $V _ { 8 }$ 的最长路径为 $V _ { 0 } { } V _ { 1 } { } V _ { 4 } { } V _ { 6 } { } V _ { 8 }$ ，长度为 $6 + 1 + 9 + 2 = 1 8$"
+      },
+      "answer": "B",
+      "explanation": "该算法从下标0开始，每次向后跨3个位置，超过目标后再检查前两个位置。目标靠近数组开头时只需常数次比较，可能少于折半查找的约 log₂n 次；接近数组末尾或中间时需要随下标线性增加的比较次数，通常不如折半查找。因此选B。",
+      "verification": "独立分析循环执行次数，并对照2016年第9题另一来源，修正跨节错配和选项中的OCR乘号。",
+      "reviewed_on": "2026-10-24",
+      "options": {
+        "A": "当x不在数组中",
+        "B": "当 x 接近数组开头处",
+        "C": "当x接近数组结尾处",
+        "D": "当x位于数组中间位置"
+      }
+    },
+    "408-83aeed36a043181813a0b9b8": {
+      "upstream_id": "2027_数据结构_7.5.5_21_1482b264a2",
+      "expected": {
+        "revision": "2f505e6e1cbf097c",
+        "answer": "B",
+        "explanation": "一个4阶B树的任意非叶结点至多含有m-1=3个关键字，在关键字依次插入的过程中，会导致结点的不断分裂，插入过程如下图所示。得到根结点包含的关键字为6,9。"
+      },
+      "answer": "C",
+      "explanation": "依次按 key%7 定位并在长度11的表内线性探测，地址0～7依次存放98、22、30、87、11、40、6、20，地址8～10为空。查找失败的初始散列地址仅可能是0～6；到第一个空地址8的探测次数分别为9、8、7、6、5、4、3，平均值为42/7=6，因此选C。不能对0～10的所有表下标平均。",
+      "verification": "独立构造线性探测散列表，逐一起始地址模拟失败探测，与2019年第8题另一来源交叉核对。",
+      "reviewed_on": "2026-10-24",
+      "options": {
+        "A": "4",
+        "B": "5.25",
+        "C": "6",
+        "D": "6.29"
+      }
+    },
+    "408-9240b1f66ea559c5ce5f5b5a": {
+      "upstream_id": "2027_数据结构_5.2.3_12_d4a271ad49",
+      "expected": {
+        "revision": "a616dcbe455cb080",
+        "answer": "A",
+        "explanation": "第6层有叶结点说明完全二叉树的高度可能为6或7，显然树高为6时结点最少。若第6层上有8个叶结点，则前5层为满二叉树，所以完全二叉树的结点数最少为 $2 ^ { 5 } - 1 + 8 = 3 9$ 0"
+      },
+      "answer": "A",
+      "explanation": "本题问结点数最少。第6层有8个叶结点时，可令树高恰为6；完全二叉树前5层必须全满，共2⁵−1=31个结点，第6层只放8个叶结点即可，总数31+8=39，选A。若题目改问最多则为111，不能把最多题的答案套到本题。",
+      "verification": "按完全二叉树各层容量独立推导最少39；明确区分另一来源同选项但问最多的变体。",
+      "reviewed_on": "2026-10-24"
+    }
+  },
+  "exclusions": {
+    "408-003a0559606e8874487390a8": {
+      "expected_revision": "e6961267dd891b1f",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-08b06865c43676a53d6dfade": {
+      "expected_revision": "59339f25e0c4e440",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-08fe5e8cf3a1a7c900695d99": {
+      "expected_revision": "c8860fff6c754ec5",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-0d793d6a67370d54cefb70f1": {
+      "expected_revision": "3b0520106ecf35d3",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-21418a6bf5e96d7ae57b4f11": {
+      "expected_revision": "a80b6cd9beac0363",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-301262f50f0614afc0e8de6c": {
+      "expected_revision": "bb11ca328dac8bc7",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-3893eb581f9027c2cbdbc1fe": {
+      "expected_revision": "b160cbb01be03fa7",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-39e4e3bbd1093ecc448cfd84": {
+      "expected_revision": "8df27901ef33d1f5",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-45fec563cc87c6db5461a2a2": {
+      "expected_revision": "bcf1877caff1d3bf",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-4b699c9130b8a6f2285747a5": {
+      "expected_revision": "bf7bee0607597bcf",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-4d2c998c7fbf43d010580bfc": {
+      "expected_revision": "47dba8a80dedd203",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-6938f275400d0e37e4b3fce9": {
+      "expected_revision": "6c68de6a31e1d0d7",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-7b80f97e0e1dc101bf689a93": {
+      "expected_revision": "0a970feb0bb2adc2",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-8722976f6b9c0d970acd77cc": {
+      "expected_revision": "3262eca64258c7b3",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-e1b9323ecf3673a1b7cff427": {
+      "expected_revision": "c01ee1b1cb1cd4b1",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-f55bcf12435e68de06936b64": {
+      "expected_revision": "24b3566f0b162822",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-f9e4eb48f10278d4cbabbe2c": {
+      "expected_revision": "9a47dba4fb16dbf7",
+      "reason": "题干依赖附图，但上游记录未包含图片或完整文字替代，无法仅凭现有题干唯一作答。"
+    },
+    "408-40c19b910d879a28a0ccf14f": {
+      "expected_revision": "4c0735c9c494401a",
+      "reason": "只声明路径压缩，未声明按秩/按规模合并；可连续把旧根挂到新根形成线性高树，B与D均可成立，单选条件不充分。"
+    }
+  },
+  "cross_checks": {
+    "408-edc93a9f8d203bf86eb487c8": {
+      "expected_revision": "6a893d817be9f293",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 23
+    },
+    "408-3e443604278c6aba63843577": {
+      "expected_revision": "b02cdc09e8f53302",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 23
+    },
+    "408-80117372186dcebd8538889c": {
+      "expected_revision": "025578e5bb447826",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 28
+    },
+    "408-c912a276b22a4f25df6602ea": {
+      "expected_revision": "9d9480e908cc4bc7",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 23
+    },
+    "408-b6707aeb12d2029c8bccf68a": {
+      "expected_revision": "1003258af3156c6f",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 23
+    },
+    "408-3ef34ffd4c2a652bb7210742": {
+      "expected_revision": "6d2e486fbbd94073",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 24
+    },
+    "408-39703cc3b2397c946feec572": {
+      "expected_revision": "fc3cf0b4f6065dce",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 23
+    },
+    "408-27e5c9a0313574c9861f414a": {
+      "expected_revision": "83aedcc7f3612c09",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 24
+    },
+    "408-f3e9cf68dab8366a606396b2": {
+      "expected_revision": "aa57e6971f57650f",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 28
+    },
+    "408-914b89027d01c073720567d5": {
+      "expected_revision": "9041a0b75942d1ae",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 25
+    },
+    "408-e0425da30fa798cd6f1781ae": {
+      "expected_revision": "c549c00090e6e415",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 23
+    },
+    "408-e2303bf1d4c6ee36cb09f58f": {
+      "expected_revision": "ab53bae5e2a9331b",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 24
+    },
+    "408-b5eddf787c3f5a825fed7d7d": {
+      "expected_revision": "e69189e9ddf6d443",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 24
+    },
+    "408-481d605f64b7d23b9c77ae0a": {
+      "expected_revision": "9e86ffbe3fe3190b",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 29
+    },
+    "408-faaf15b2789bfcc8ba091a07": {
+      "expected_revision": "655d766526494bd6",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 23
+    },
+    "408-2c0854cdba5c099ca1f29874": {
+      "expected_revision": "b3db15796c6153a3",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 32
+    },
+    "408-5028fde086753d2e5668d033": {
+      "expected_revision": "8c4264c549f66070",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 27
+    },
+    "408-874d213fe64f53e0544bd4ad": {
+      "expected_revision": "830b234efed3909b",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 31
+    },
+    "408-a23703231cdae9c1e5ff8d06": {
+      "expected_revision": "8e7f55d64686a252",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 24
+    },
+    "408-864749e32a9b11304b359481": {
+      "expected_revision": "1f5678d58df98949",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 29
+    },
+    "408-1f3582ed7762e219ec8327a7": {
+      "expected_revision": "43f4d2422541ffe6",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 24
+    },
+    "408-e99d397469fe8ce4918f5de8": {
+      "expected_revision": "ad70c851129822b5",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 23
+    },
+    "408-c3334303777277dd612ef39b": {
+      "expected_revision": "a9683ea46b92a012",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 24
+    },
+    "408-ee7e824f18d0c8b68ee7fdb4": {
+      "expected_revision": "bc8aa332c92e86cd",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 25
+    },
+    "408-4f86fa0852e582d8d012e7fe": {
+      "expected_revision": "781922a5cb3e099d",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 31
+    },
+    "408-c8d77daea1a811d57808d63d": {
+      "expected_revision": "7c0860955e75d08f",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 26
+    },
+    "408-001f8246c97f3c418f7af9b3": {
+      "expected_revision": "b521565691ef45ec",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 31
+    },
+    "408-f8e3d16872940d94ba26e5b5": {
+      "expected_revision": "3329dbc5b5f3d1ee",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 25
+    },
+    "408-655975964cda985f3cfba2d1": {
+      "expected_revision": "41de57bf631302bc",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 27
+    },
+    "408-7e411b3867eb34bd3f32698c": {
+      "expected_revision": "20be79ab593f058e",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 23
+    },
+    "408-51709e8a203411d19d74466a": {
+      "expected_revision": "2294556fcf532f06",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 29
+    },
+    "408-7da506fc92fed5569db60148": {
+      "expected_revision": "1539a5e233e082a6",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 24
+    },
+    "408-e388cbec493382bd29a5b2fc": {
+      "expected_revision": "254c5f36b32f11d8",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 28
+    },
+    "408-fde89a9ece1e7b00c17d30ea": {
+      "expected_revision": "078d2ee71ee3ec49",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 27
+    },
+    "408-881633a03a537eb53d77432c": {
+      "expected_revision": "09564e0749a6dfed",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 24
+    },
+    "408-3206af483fad11156fd72f55": {
+      "expected_revision": "92f8f529e1f42e0c",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 26
+    },
+    "408-cfb2114e5ec8933649f7986c": {
+      "expected_revision": "16c3098faf442507",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 29
+    },
+    "408-1d38f2e0f24b039789d123ee": {
+      "expected_revision": "2fcd4f5d4e9d9ec5",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 30
+    },
+    "408-600577835191e03ea4182bde": {
+      "expected_revision": "88ba1148bef1a2c6",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 24
+    },
+    "408-3d346ab1c54690f8a084ae01": {
+      "expected_revision": "d5a5b6c5d2e38a76",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 27
+    },
+    "408-0b4a7b06e109bb6a467b384a": {
+      "expected_revision": "26fd3136dd08359d",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 27
+    },
+    "408-2b866503a6aa3dfc8ae173ef": {
+      "expected_revision": "bcd77094da360916",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 26
+    },
+    "408-2e74073a14bfb64de09c6406": {
+      "expected_revision": "279668171e837c0a",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 25
+    },
+    "408-6e5f5809c70cb58fff1526c0": {
+      "expected_revision": "d0a555eb2c26b6e6",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 27
+    },
+    "408-b25378b0d6e7025701d30124": {
+      "expected_revision": "79930bc685ea193d",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2024/",
+      "year": 2024,
+      "number": 30
+    },
+    "408-c5c00bd19bc067d4b55882a1": {
+      "expected_revision": "94eb0ea4515552ef",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2025/",
+      "year": 2025,
+      "number": 23
+    },
+    "408-9c1893967fc1fa3ff78f759b": {
+      "expected_revision": "982a1237f5fe6fb4",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 25
+    },
+    "408-ddff5a69bb088550c18f2263": {
+      "expected_revision": "0e4b958b6870ecaa",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 32
+    },
+    "408-6b712f54a3cae115fddb7674": {
+      "expected_revision": "e536613dfc79d1e2",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 30
+    },
+    "408-7686bcdea94ce4b4df0b6826": {
+      "expected_revision": "887484ae8293545f",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 27
+    },
+    "408-069d89e8c1da4353a1f5ff5e": {
+      "expected_revision": "c502b9c5ef8ce953",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 32
+    },
+    "408-aafecb9e037edc60e435036d": {
+      "expected_revision": "e5941e7a0835defb",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 28
+    },
+    "408-470097529ea1d30d0c2d1041": {
+      "expected_revision": "9152e3cc44eb3e9f",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 32
+    },
+    "408-c3e999191b6df74f391fe9a4": {
+      "expected_revision": "a6803f55d67c96e1",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 32
+    },
+    "408-70fb28d459a83bba417e3318": {
+      "expected_revision": "6aa27eaf9276ddfb",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 32
+    },
+    "408-1759a217458ec62a77710305": {
+      "expected_revision": "3eef339b3e1e9e3d",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 24
+    },
+    "408-43440c2df14f702e30ac760c": {
+      "expected_revision": "3aa1710572a29894",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 26
+    },
+    "408-fa2bc855fab0f4ed51ccb4d0": {
+      "expected_revision": "76bed72aa6abb3a9",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 25
+    },
+    "408-4a4513fdf466a1d60fe0c25e": {
+      "expected_revision": "90c36e0b3120fec7",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 26
+    },
+    "408-3f3582267c10bd666ed5a297": {
+      "expected_revision": "5dae7ce1b83532df",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 30
+    },
+    "408-67994fb421240a3cdaca429e": {
+      "expected_revision": "f0f3e36a45114748",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 31
+    },
+    "408-10fbc5c1506856c48415b273": {
+      "expected_revision": "4a82f9051e367d2e",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 26
+    },
+    "408-4e28762ca9f5dd2d4fa18f75": {
+      "expected_revision": "7ac221c70463ae18",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 28
+    },
+    "408-a0e0615de9588fdc9b1017dc": {
+      "expected_revision": "c6e24bdfb158cd1f",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 30
+    },
+    "408-e876d65b9fba17b520e33d31": {
+      "expected_revision": "358d79105b4f9b2e",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 32
+    },
+    "408-24d29940dc33992d44e3da28": {
+      "expected_revision": "ea2ab6646d9eb97f",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 28
+    },
+    "408-318733182b8ad8c438d388b8": {
+      "expected_revision": "53c5f3007e36e83d",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 32
+    },
+    "408-ef914b5030d236843a53a5f1": {
+      "expected_revision": "2a4ad8bf7a833347",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 29
+    },
+    "408-abbe45d3c84cc57e78b531f4": {
+      "expected_revision": "57111b3fbd58172e",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 30
+    },
+    "408-302eb803ff34c1243665798b": {
+      "expected_revision": "a83e4c7cd6456fb9",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 25
+    },
+    "408-b8b26f87dabf735df8574ae6": {
+      "expected_revision": "88e5836f8184dda8",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 30
+    },
+    "408-9eeb09cfaa8b5add0f9e9709": {
+      "expected_revision": "412ec974c9be47f4",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 28
+    },
+    "408-998444233aefe8ab2cc796d1": {
+      "expected_revision": "8bea7d04d68fada1",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 30
+    },
+    "408-14cf68cf87aa6c493293ebd6": {
+      "expected_revision": "e1df9c478caa9095",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 30
+    },
+    "408-94a9a1a89817f3a9eb919b4a": {
+      "expected_revision": "990a7eee3125837a",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 27
+    },
+    "408-1b03b9583f73a931dac99de6": {
+      "expected_revision": "159004a7c264558f",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 26
+    },
+    "408-fa9321d0e7898d7278d90102": {
+      "expected_revision": "23e0dad89b380e23",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 29
+    },
+    "408-8cab5dfaeeb0a44d97f73a1f": {
+      "expected_revision": "06b75035d8870162",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 28
+    },
+    "408-0081a17f94aa983a53fb5b8f": {
+      "expected_revision": "7870688250b9dc95",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 29
+    },
+    "408-d7c536655d656b596285fdac": {
+      "expected_revision": "29f3a18ff2d8edab",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 30
+    },
+    "408-247640aafa973f8f46daf45c": {
+      "expected_revision": "0778c722348cd55c",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 28
+    },
+    "408-dc7a0683bbafbe7dcc2ee4e5": {
+      "expected_revision": "4a64ac0a214697f3",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 30
+    },
+    "408-91134c520953b2397890503a": {
+      "expected_revision": "5f1bd38658fece8c",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 28
+    },
+    "408-b63ea5114a48a6421c084668": {
+      "expected_revision": "1ddf4709ae36e5bf",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 31
+    },
+    "408-7fb053f693cfef0a58cd3b7c": {
+      "expected_revision": "43b6740c2a445fdf",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 30
+    },
+    "408-2994933e5954a25cb1b16d0e": {
+      "expected_revision": "4b7bafd16c022035",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 28
+    },
+    "408-f25044aa108232e66d5dad17": {
+      "expected_revision": "b913d8aafdaf2bf2",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 23
+    },
+    "408-d00b8af8bcc81100959a0798": {
+      "expected_revision": "44f7b167cf96888b",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 26
+    },
+    "408-9e89b9ce1280d9275db0f90c": {
+      "expected_revision": "35df891864ebde0b",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 24
+    },
+    "408-181a1eefa618c371f88e00b4": {
+      "expected_revision": "f7ebfa86ed5868c6",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 29
+    },
+    "408-69e17dc142b179fae929f252": {
+      "expected_revision": "075f75c5ac3f3d77",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 29
+    },
+    "408-d6685602bede7517feb15ab0": {
+      "expected_revision": "a3832e19b5bda221",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 30
+    },
+    "408-68060e3aaae1e1bad33c9010": {
+      "expected_revision": "ecffc8e485e758ce",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 26
+    },
+    "408-d2d1f733d8cb7a25b8c01eaf": {
+      "expected_revision": "e5580f8354f59100",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 31
+    },
+    "408-b8815f67df6043cade376543": {
+      "expected_revision": "faab20e2d1262ef4",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 23
+    },
+    "408-548ae96a63dc5739b8c24979": {
+      "expected_revision": "564addd8fd1b6c39",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 24
+    },
+    "408-2558739e7784e983de02bdc3": {
+      "expected_revision": "460589cb76d4a38e",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 30
+    },
+    "408-084d02d5adac5de02f4a1472": {
+      "expected_revision": "05d87ab7a1ea4f76",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 31
+    },
+    "408-2476a85eb3884bf1b17c6945": {
+      "expected_revision": "ebd5c5b5a83e985b",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 31
+    },
+    "408-2ec0fae6124cb7724fdffa6e": {
+      "expected_revision": "7e7002003f22cb7a",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 26
+    },
+    "408-c22760cefc11a3fedf7f23af": {
+      "expected_revision": "7800467a23569681",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 25
+    },
+    "408-bc9264abd3267fd76f4ea299": {
+      "expected_revision": "7113d74c445e2a02",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 32
+    },
+    "408-33c02123bf29aa014bf6a6fa": {
+      "expected_revision": "2728086e2c6ebfdd",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 26
+    },
+    "408-bd1ff1252d52c72d0e7914ee": {
+      "expected_revision": "cd725b35f09b39d1",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 32
+    },
+    "408-a6124ad50d63db48d098ad26": {
+      "expected_revision": "1559a5a220ffdc37",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 23
+    },
+    "408-6116df6a0f98ab5490818acf": {
+      "expected_revision": "3d2c8e8989c622a9",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 32
+    },
+    "408-13383cca5ad3743b00a60646": {
+      "expected_revision": "36ac827ff356940f",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 25
+    },
+    "408-c1fdab7473742c1b61b567d5": {
+      "expected_revision": "3f8022b34708348c",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 28
+    },
+    "408-b7df5a383347888bc21fbce6": {
+      "expected_revision": "af93839634142041",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 31
+    },
+    "408-2c5871790412bcbff65f4840": {
+      "expected_revision": "f79a33d8cca3a3c5",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 30
+    },
+    "408-e3ac5fb100bf399206d2edf3": {
+      "expected_revision": "0a9bb899b621c741",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 32
+    },
+    "408-cf5ede46d88b60e11dd97fc2": {
+      "expected_revision": "3a517dc11eda4048",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 32
+    },
+    "408-06f24edca4c0b75ac2b19d88": {
+      "expected_revision": "9981a73750296365",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 29
+    },
+    "408-81491a5f69faa7619151812a": {
+      "expected_revision": "a251a9c619f51ab8",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 32
+    },
+    "408-f3325b460081d137110fa7ca": {
+      "expected_revision": "7b3011edf8801745",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 32
+    },
+    "408-709d71484d328a002fa1094d": {
+      "expected_revision": "4b3308cc47d07fda",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 31
+    },
+    "408-ec4e20fa6d1fd8476b6743c3": {
+      "expected_revision": "4a16868fd550cfbc",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 30
+    },
+    "408-8b2b5ef012d78deaa4777e41": {
+      "expected_revision": "b32606d64fc3327e",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 26
+    },
+    "408-be9afba118893836f45104ed": {
+      "expected_revision": "a1aaeb5914d2af07",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2024/",
+      "year": 2024,
+      "number": 32
+    },
+    "408-972df80b4d38f6259f28c64c": {
+      "expected_revision": "fff07c33f78277c3",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 2
+    },
+    "408-1817cb421c8761f917267bdd": {
+      "expected_revision": "9b6d2f294311069d",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 2
+    },
+    "408-64c243d7150c9f885c4444ca": {
+      "expected_revision": "e85e643c07cc6f69",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 2
+    },
+    "408-bf0185b6712e4ccef12ebd5b": {
+      "expected_revision": "bf7a50be07f9c27c",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 2
+    },
+    "408-5c270a4735141b1c9e52553e": {
+      "expected_revision": "377709516fe9e708",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 2
+    },
+    "408-c0d7744d845535dfa2a39db6": {
+      "expected_revision": "cc7972aeeab5654d",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 3
+    },
+    "408-77f0b059f934d1a32c1f69cd": {
+      "expected_revision": "cb9cb40b32569965",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 2
+    },
+    "408-39d29287a47081f8172da2f6": {
+      "expected_revision": "0ffa0fe02de208be",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 1
+    },
+    "408-8e4e0525664521a08f39f29f": {
+      "expected_revision": "ef9754a7bf3d21dc",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 2
+    },
+    "408-43b2c55b18f34e4bb8916c98": {
+      "expected_revision": "00a61717e6939040",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 2
+    },
+    "408-7d0af8998fce0f47a3f54b95": {
+      "expected_revision": "991685b6ea1c6cf5",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 3
+    },
+    "408-ba43ba27eae8f47e0efc2219": {
+      "expected_revision": "69b4b2ef5288568b",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 3
+    },
+    "408-c52d80906afbd86ebe006d46": {
+      "expected_revision": "ce598b4279c90f61",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 8
+    },
+    "408-61547b888f5286a1cb1cd6df": {
+      "expected_revision": "742ea9325ff22071",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 9
+    },
+    "408-de5504c9b6a3313307ad4c6c": {
+      "expected_revision": "249ffea12007887d",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 5
+    },
+    "408-bfe171c3c5ab7b180926d35d": {
+      "expected_revision": "1abf5b0fe656fd7a",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 5
+    },
+    "408-2e81a67910a77a91f602d7a2": {
+      "expected_revision": "9dcae66b200dcddc",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 5
+    },
+    "408-31ec854d81285f8ecbdc1253": {
+      "expected_revision": "0276dff7b126e724",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 4
+    },
+    "408-50cda5dcd6f0b0d681d82cbb": {
+      "expected_revision": "31eb3bbf63bb60f2",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 3
+    },
+    "408-91b0772bfa41c79dbaa9c825": {
+      "expected_revision": "31e99e24e1ebca5a",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 4
+    },
+    "408-e6abe27b0cef6828e0ae8639": {
+      "expected_revision": "6eb8506861fce0f6",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2025/",
+      "year": 2025,
+      "number": 3
+    },
+    "408-c39e219848f2fd845ec38403": {
+      "expected_revision": "44e212ebe6512e16",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 6
+    },
+    "408-ce094053e3f7f2b1caf564e7": {
+      "expected_revision": "f5e1a8590a527778",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 6
+    },
+    "408-565b7d9f779cbf186a8375bc": {
+      "expected_revision": "35cc758f38318596",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 2
+    },
+    "408-534a62cbe63bd58391f0d4e8": {
+      "expected_revision": "c1dfb1bd47c47a3a",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 4
+    },
+    "408-ba6f0031ec4110bf6ed60ccf": {
+      "expected_revision": "bfff27a4b7ad30a3",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2025/",
+      "year": 2025,
+      "number": 4
+    },
+    "408-5089344f1d4738e3b1ee8759": {
+      "expected_revision": "8952ced97a956955",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 6
+    },
+    "408-b3b171bbc60e08fdd28189c4": {
+      "expected_revision": "6e7847bcfab20578",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 3
+    },
+    "408-66d3c43f283c92eb84d61139": {
+      "expected_revision": "6bd06fd8ca788fda",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 6
+    },
+    "408-f40ed2a5549bf0852180b4c8": {
+      "expected_revision": "929a81aa8a92ef55",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 5
+    },
+    "408-af76ca09aff437e1e0d3d095": {
+      "expected_revision": "4027a983b7c9f46d",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 3
+    },
+    "408-2dd19c8582240105143f4f8d": {
+      "expected_revision": "9eeb688be972d077",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 5
+    },
+    "408-1a8b1f4262b74a8702f24c78": {
+      "expected_revision": "0d1a0eed4207af66",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 5
+    },
+    "408-84b840f39dc12f68c59e7957": {
+      "expected_revision": "2645e707eba92568",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 4
+    },
+    "408-7a270c3408bbf679518666e5": {
+      "expected_revision": "9c8ce985e756cb5e",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2025/",
+      "year": 2025,
+      "number": 5
+    },
+    "408-8e76f5e6a61e981b06fb42d6": {
+      "expected_revision": "9237d55d26ed9c8a",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 7
+    },
+    "408-391bd9477ba12ff5c674ee71": {
+      "expected_revision": "915f0ae90e79983c",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 7
+    },
+    "408-469d7a28e51779b66fdcf016": {
+      "expected_revision": "125dcccd57080446",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 7
+    },
+    "408-6cadb5533b534875b07d0a53": {
+      "expected_revision": "a168dc895732c06b",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 6
+    },
+    "408-daceaebad3d25290722ece53": {
+      "expected_revision": "2e3dddff6c7367c8",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 6
+    },
+    "408-4b17bcec37bf54bb8df56eca": {
+      "expected_revision": "c8a284b134807135",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 6
+    },
+    "408-5765b28efea43e4ab2b9ba60": {
+      "expected_revision": "18b0ce53f40e4cd6",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 8
+    },
+    "408-63f55b7b9770c12f55fbb527": {
+      "expected_revision": "865027f32c6ff24e",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2025/",
+      "year": 2025,
+      "number": 6
+    },
+    "408-d68041a9d9b1c09a31597925": {
+      "expected_revision": "3afeeb82433ff4e0",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 9
+    },
+    "408-9d658bfb69d69de388aa02fc": {
+      "expected_revision": "f82f254a5a08f3a6",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 7
+    },
+    "408-1ff648c8ad602ae1e1c837ff": {
+      "expected_revision": "3f46f1f9d3312a26",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 9
+    },
+    "408-78636c176e2e89689ca476eb": {
+      "expected_revision": "e07041dfb0f48fba",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 8
+    },
+    "408-6f6d2bbce69c5e8ae217aeb5": {
+      "expected_revision": "b6013ddcd502c08a",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 7
+    },
+    "408-c609c60d0ef8b0aa62b2b3b5": {
+      "expected_revision": "a0b00441723ab699",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 6
+    },
+    "408-d3387c7f2fc160796eac3ebf": {
+      "expected_revision": "2b9fc7ff7ec86754",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 3
+    },
+    "408-ec2bc6556257d82081d07d17": {
+      "expected_revision": "fc00d1257e34ad74",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 4
+    },
+    "408-fefd6505ab01f7cda6bcbea3": {
+      "expected_revision": "54a11273b7d5a01b",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 4
+    },
+    "408-6847a044a8a93e908dc93a6c": {
+      "expected_revision": "6ed61a9e68276b64",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 6
+    },
+    "408-9e45559f1f01f86281e7871a": {
+      "expected_revision": "6ff3bfde603be667",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 9
+    },
+    "408-ddf3efc657b3099861080075": {
+      "expected_revision": "ecd74932741f3ca6",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 9
+    },
+    "408-a6fd50085fdba0e0d1456db1": {
+      "expected_revision": "9ba09da33d9408a3",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 10
+    },
+    "408-fe38eaacd190ebc462218f68": {
+      "expected_revision": "798242b32ff70953",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 9
+    },
+    "408-20906ef54fa07f5ef07404fd": {
+      "expected_revision": "41b2900d672c715d",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 8
+    },
+    "408-50fc20471e90414a7a41488a": {
+      "expected_revision": "be75fa9740a46f4d",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 10
+    },
+    "408-cb9fe1ecb67e2ce385219bdc": {
+      "expected_revision": "d5856792ef13eac0",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 9
+    },
+    "408-3a2fa3f452b6014bdabf6e7b": {
+      "expected_revision": "6a72f038a45cb6e3",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 8
+    },
+    "408-a238fe96d20a6fda67dd7a72": {
+      "expected_revision": "67e6148decdc2d27",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 9
+    },
+    "408-98bfbda16ff1425696a5f899": {
+      "expected_revision": "6ce5d1c2d352b761",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 8
+    },
+    "408-aaeee656d2e5fc79bfec345c": {
+      "expected_revision": "07a4e9f98a525f76",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 9
+    },
+    "408-efbe1acba9b7e79bec47df12": {
+      "expected_revision": "f4e88349b1a575d4",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 9
+    },
+    "408-e14369c58696aa29390e24eb": {
+      "expected_revision": "2c48e3473f7a140a",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2025/",
+      "year": 2025,
+      "number": 9
+    },
+    "408-01c0cebc4917c90a9ca56cfb": {
+      "expected_revision": "690f7561e8b83319",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 11
+    },
+    "408-4ee37b5d907d7321c6b73aa7": {
+      "expected_revision": "31a95e077e507f06",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 10
+    },
+    "408-1e9f9020649c8cbff780dd53": {
+      "expected_revision": "6de84344b81a8746",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 11
+    },
+    "408-01692fab28d0c6c61e3b1462": {
+      "expected_revision": "77475f97254b9725",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 10
+    },
+    "408-44de4d93d3ec8de5c05663f0": {
+      "expected_revision": "163db76adc38f7a8",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 10
+    },
+    "408-d4978285847edcd528c699d3": {
+      "expected_revision": "017cdac17625806b",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 10
+    },
+    "408-f1d7c8d9d9b9ec8f9017b385": {
+      "expected_revision": "bd1e2253da0c1910",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 11
+    },
+    "408-0efa1225abbac834fe81d365": {
+      "expected_revision": "e41c3bd8142c1db4",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 10
+    },
+    "408-756b74a59ed113655f70f910": {
+      "expected_revision": "d812d9d3faa9e7e6",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 11
+    },
+    "408-a97d81a4835175a9de447524": {
+      "expected_revision": "2e4be70341d0066e",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 11
+    },
+    "408-ae2b19f4728f76cbee6e2af1": {
+      "expected_revision": "4f01b98e4c5f871a",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 10
+    },
+    "408-44a2010b794d703c3d7e9a42": {
+      "expected_revision": "c9d917a9c7026bbf",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 11
+    },
+    "408-6f93882ba0a5064db2301b76": {
+      "expected_revision": "1c3d8e0335d61d8f",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 11
+    },
+    "408-b9dc254f78d63c6998ec9828": {
+      "expected_revision": "8d5354ea77743061",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2024/",
+      "year": 2024,
+      "number": 9
+    },
+    "408-3d28a81b02ea45747002a401": {
+      "expected_revision": "00f500e01216921f",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 11
+    },
+    "408-48b41d66e1330bf2bb5e5335": {
+      "expected_revision": "ac91ff8677386939",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 10
+    },
+    "408-42ee1c0b1b7bf0e843ae4f46": {
+      "expected_revision": "7dfa7225921e0b1e",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 10
+    },
+    "408-495059ebab0503654884cee4": {
+      "expected_revision": "47ad3262a81be400",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 10
+    },
+    "408-67f5c2e670ba96785910611d": {
+      "expected_revision": "fcf9ef84e2d2ae49",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 4
+    },
+    "408-14972efe2140c791df1b0d7e": {
+      "expected_revision": "97f0b6aa91d91efb",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 11
+    },
+    "408-26a31b4476f921db67f7181e": {
+      "expected_revision": "d05efb06144202cf",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 11
+    },
+    "408-f2aa7dbf1e1d828efee374c7": {
+      "expected_revision": "d5a560765ed8e8b8",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2024/",
+      "year": 2024,
+      "number": 11
+    },
+    "408-952d32f0096e8287ba7398ae": {
+      "expected_revision": "673c600cd2f0ce6e",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 35
+    },
+    "408-206bd68c1ed325c37e732650": {
+      "expected_revision": "1950946d587edb97",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 33
+    },
+    "408-5b68ba2f9f800ef64e4f10e9": {
+      "expected_revision": "13882c6799e6352d",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 33
+    },
+    "408-53e79b369b1ae97e0e04da7c": {
+      "expected_revision": "3e4555ea8a0d97c2",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 33
+    },
+    "408-3073e86cb7d32e07deb6d249": {
+      "expected_revision": "05720a4c1580c9e9",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 33
+    },
+    "408-062de8c98734f724bb4d985b": {
+      "expected_revision": "354bbcda6ea13b72",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 33
+    },
+    "408-64d196e42bc758fecf5ec130": {
+      "expected_revision": "9e2d7b9509187edb",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 33
+    },
+    "408-f55bcf12435e68de06936b64": {
+      "expected_revision": "24b3566f0b162822",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 33
+    },
+    "408-7bea55374074868990e30d97": {
+      "expected_revision": "cfbc375c4d61782c",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 33
+    },
+    "408-736463e4849a46cac890f9c8": {
+      "expected_revision": "10b5e84c5ec3eda9",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 34
+    },
+    "408-7a6cae0cb590c91217bfa6c7": {
+      "expected_revision": "a8e125ae6118be80",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 34
+    },
+    "408-f133caa1ed3a13b88a420cc8": {
+      "expected_revision": "cc67820df3266089",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 34
+    },
+    "408-ce0985e7573bb31c57d8ee52": {
+      "expected_revision": "c5955fb3227bb796",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 34
+    },
+    "408-5f46c607df9362457cb6d118": {
+      "expected_revision": "ea6cd4106127a445",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 34
+    },
+    "408-3188d921229f3480c3974251": {
+      "expected_revision": "355860a68ad81db0",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 34
+    },
+    "408-f403deb526abb3e36834b0bc": {
+      "expected_revision": "605a36cc0a806b4e",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 35
+    },
+    "408-7a9b3ad7ed145b030df4fe20": {
+      "expected_revision": "b347b6fca0cc1b1f",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 35
+    },
+    "408-e14dac180c9cdbc2687f6eaf": {
+      "expected_revision": "e4a5d55359d5a147",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 36
+    },
+    "408-68dd59a043fec76fe7ee10d9": {
+      "expected_revision": "2e2ee354b7b10c9b",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 35
+    },
+    "408-5507d32e4b59099f3760789d": {
+      "expected_revision": "60e2389fa640f18e",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 36
+    },
+    "408-9a1ba13bc8835ae256f36750": {
+      "expected_revision": "69bf06fbfc5a6873",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 35
+    },
+    "408-b341b924b82482ac3ce548fa": {
+      "expected_revision": "74ddb524276703b6",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 36
+    },
+    "408-4fa5f4325c747b44e2fbf04b": {
+      "expected_revision": "59aa338c5957db0b",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 37
+    },
+    "408-90ee9d555923e4b28f788458": {
+      "expected_revision": "5c9feeb4101a7859",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 36
+    },
+    "408-7c4af707864ff48ef4be1995": {
+      "expected_revision": "5e945bf93864a02f",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 35
+    },
+    "408-ba28da485e47b693f9ec6188": {
+      "expected_revision": "f3fc8879979e2216",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 36
+    },
+    "408-40644002a02fb5f6c67e8f2a": {
+      "expected_revision": "89182297de1da7c8",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 35
+    },
+    "408-5073db665a00f78bd0d8d6b8": {
+      "expected_revision": "d45f723e13e4217d",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 36
+    },
+    "408-f205a13ee90f1621c8c18221": {
+      "expected_revision": "84e342db895b546d",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 34
+    },
+    "408-5ad75e539f1a95a55c192582": {
+      "expected_revision": "7da1041f5ce67cb0",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 36
+    },
+    "408-b079c334c5946a7d651eced8": {
+      "expected_revision": "e500619f53f5cbaf",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2024/",
+      "year": 2024,
+      "number": 36
+    },
+    "408-44684fb1b8e249b23c052a66": {
+      "expected_revision": "b9f213426b1f97a0",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 36
+    },
+    "408-56ffb7567959f09436ba573a": {
+      "expected_revision": "48289862a6ea8df9",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 37
+    },
+    "408-5c829ce2edd90c6f2708d82d": {
+      "expected_revision": "9ff09f0c74ca0a42",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 34
+    },
+    "408-8196eb8edf0d65ed66eed387": {
+      "expected_revision": "930109800cd497c9",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 37
+    },
+    "408-1b86714ae84e221b8dbd6b7a": {
+      "expected_revision": "47f081be707d80f4",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 37
+    },
+    "408-d792b68c60cfd04114f73999": {
+      "expected_revision": "d5fc73f24b43cc74",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 36
+    },
+    "408-a3fa8e25b4de9b80e85cc289": {
+      "expected_revision": "d168e463569813a4",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 38
+    },
+    "408-593723fe47e75b2329303ae9": {
+      "expected_revision": "cafbf3bd82602904",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 39
+    },
+    "408-d6069139c9f7e5539eed40c7": {
+      "expected_revision": "fd0b37065b85ba4f",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 33
+    },
+    "408-275fd2dd63054c80f46e7867": {
+      "expected_revision": "cc2f9512127ef8d0",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 38
+    },
+    "408-df945da112737f66f4a54e18": {
+      "expected_revision": "31e424b663aaab5b",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 36
+    },
+    "408-82b7c9cb60b396deda9d42dd": {
+      "expected_revision": "c678826a00374449",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 38
+    },
+    "408-e4157115cb8395b673fcd9c7": {
+      "expected_revision": "910c6471a89f4b48",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 39
+    },
+    "408-bf415431b44ad176557d0dd8": {
+      "expected_revision": "3bf6f7f67b705a05",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2023/",
+      "year": 2023,
+      "number": 40
+    },
+    "408-e1b9323ecf3673a1b7cff427": {
+      "expected_revision": "c01ee1b1cb1cd4b1",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 37
+    },
+    "408-7f2f6c033eaab7fb494681cf": {
+      "expected_revision": "90875bd4da1527d4",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 37
+    },
+    "408-e572e2a79087982caed3dc7b": {
+      "expected_revision": "cd328bb37937391a",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 38
+    },
+    "408-fa58b55b252d1be67a5c4db7": {
+      "expected_revision": "db47d5b598ce441c",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 38
+    },
+    "408-e82fb3835994fee415bb6b7d": {
+      "expected_revision": "98ac43fecd664b99",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 39
+    },
+    "408-1fddd697e563bdf8a11e6e3a": {
+      "expected_revision": "26e603bc1f639261",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 39
+    },
+    "408-d60ebdd30cb16514bc6492ec": {
+      "expected_revision": "340dc15d3221496d",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 39
+    },
+    "408-8467098bdc469b77b4cf008e": {
+      "expected_revision": "516d97efba2ed257",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2011/",
+      "year": 2011,
+      "number": 40
+    },
+    "408-7a2b611ef55a7a2f13cbf21a": {
+      "expected_revision": "93493caacd6b5b08",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 39
+    },
+    "408-1bc5dc8d56ce485aa45d3aa6": {
+      "expected_revision": "4217affe2825134d",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 38
+    },
+    "408-d2edcebfef24aa3bc65390f8": {
+      "expected_revision": "78e083771c99343f",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 39
+    },
+    "408-3de6701d5af08be3399cee3c": {
+      "expected_revision": "cd7d3b1f1bb161b5",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 39
+    },
+    "408-45fec563cc87c6db5461a2a2": {
+      "expected_revision": "bcf1877caff1d3bf",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 38
+    },
+    "408-6356bcc106e0bb98cdb6e1ee": {
+      "expected_revision": "e7ed2596e906454e",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 39
+    },
+    "408-23601200c036e12fb91a4b07": {
+      "expected_revision": "f960dc4f97370438",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 38
+    },
+    "408-5eea0e416a37860b4a959e73": {
+      "expected_revision": "739540eb19b72c66",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2020/",
+      "year": 2020,
+      "number": 39
+    },
+    "408-050f57e55ab7a2e194373ae1": {
+      "expected_revision": "0a74fcb74f471425",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 38
+    },
+    "408-844da8baff9e698523c8ea8e": {
+      "expected_revision": "4e150eb54ddf5dc6",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2021/",
+      "year": 2021,
+      "number": 39
+    },
+    "408-e465f379011b4afa26f1e733": {
+      "expected_revision": "b9dceb1b7f2c8cf4",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 38
+    },
+    "408-26e7950aa2b03900ed5ae0ac": {
+      "expected_revision": "c51d3adc4d041d5a",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 39
+    },
+    "408-4ebac2a001057f02410f4d30": {
+      "expected_revision": "e17b1dd422574d00",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2024/",
+      "year": 2024,
+      "number": 38
+    },
+    "408-3dd0b6a45d193a1382c9c537": {
+      "expected_revision": "5fd4258f96b358f8",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2025/",
+      "year": 2025,
+      "number": 39
+    },
+    "408-5fbec3c04211ccf2dccf4df7": {
+      "expected_revision": "d8b87cd833fd369e",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2018/",
+      "year": 2018,
+      "number": 33
+    },
+    "408-0bd0c4224621b8caf256fa92": {
+      "expected_revision": "8ba5678c7fdd219a",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 40
+    },
+    "408-26ba9f091ceea9427c164de9": {
+      "expected_revision": "bd9817613a258ed1",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2013/",
+      "year": 2013,
+      "number": 40
+    },
+    "408-50b7ec025df5ff8e56e48e47": {
+      "expected_revision": "fe6bceeb7d25b7c1",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 33
+    },
+    "408-e96fc217fdf249c9436fdbb7": {
+      "expected_revision": "11950a116994f841",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2025/",
+      "year": 2025,
+      "number": 40
+    },
+    "408-d294f75c8f3ad1212c7e4db4": {
+      "expected_revision": "38d2c41aa45a32b1",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 40
+    },
+    "408-de1911846948851d3b3fb9fb": {
+      "expected_revision": "128a80c928cbccb9",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 40
+    },
+    "408-be46d9b7842dbbefd1acb70a": {
+      "expected_revision": "e2086581fbe24ea9",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 40
+    },
+    "408-e72f8dfb0695c0c64593c399": {
+      "expected_revision": "959390d9eb63a192",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2024/",
+      "year": 2024,
+      "number": 40
+    },
+    "408-9b362be696ea330377e6ee58": {
+      "expected_revision": "64d983099363f0fa",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 1
+    },
+    "408-0c687e9623c574db25e0faa1": {
+      "expected_revision": "47b70736a9f06dc6",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 1
+    },
+    "408-580cd6a3a55a8d7694e30d4f": {
+      "expected_revision": "7d499b6824d9c32f",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2010/",
+      "year": 2010,
+      "number": 2
+    },
+    "408-a914a31b5b72d0f0ad3a8f9b": {
+      "expected_revision": "18de1a5167685f25",
+      "answer": "A",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 1
+    },
+    "408-b50de916d6af1671fef0434b": {
+      "expected_revision": "274742c9fa56db7f",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2015/",
+      "year": 2015,
+      "number": 2
+    },
+    "408-47aad06ac5d1d4665705e533": {
+      "expected_revision": "fe5d19af6c7955ce",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2017/",
+      "year": 2017,
+      "number": 4
+    },
+    "408-3f27d328b7ddaec14931a2f8": {
+      "expected_revision": "ac1ccd46055218d6",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2022/",
+      "year": 2022,
+      "number": 3
+    },
+    "408-fa574d0999097b0c669fcb66": {
+      "expected_revision": "23ae4fc2cdf6b260",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2014/",
+      "year": 2014,
+      "number": 39
+    },
+    "408-e97b36dfb30f1e46612cfa80": {
+      "expected_revision": "af5df2c0fb110c25",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2019/",
+      "year": 2019,
+      "number": 40
+    },
+    "408-146e71242375832b7b5fe1ab": {
+      "expected_revision": "e389da15d91895ea",
+      "answer": "B",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 27
+    },
+    "408-b94a56771ff4cd61be3c049d": {
+      "expected_revision": "29e5bf60ebf875f6",
+      "answer": "C",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2009/",
+      "year": 2009,
+      "number": 25
+    },
+    "408-a76e06a42f7a65598975ab8e": {
+      "expected_revision": "0772257c90f232ec",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2012/",
+      "year": 2012,
+      "number": 27
+    },
+    "408-1bb50824a6b8033d36c9700e": {
+      "expected_revision": "1aecf4f9d4a9064c",
+      "answer": "D",
+      "reference_url": "http://www.csgraduates.com/study_methods/408quiz/2016/",
+      "year": 2016,
+      "number": 28
+    }
+  },
+  "cross_check_source": {
+    "repo": "Become-ILLUSORY/408-quiz",
+    "commit": "d17aeb568dc48b536051831880fc80a5cfb89904",
+    "file": "questions.json",
+    "sha256": "e40708f71642c8e16353860c550e030e09bab842652ba496198b9e16dc43c0d7"
+  },
+  "independent_reviews": {
+    "408-0757d429c8f8d9dd1c68c3e8": {
+      "expected_revision": "3c05d51c1ac6348e",
+      "answer": "A",
+      "computed": 4098,
+      "verification": "5次Push、3次Pop，栈向高地址增长，净增2个单元。"
+    },
+    "408-0de86c990d6d53e99a73cd8b": {
+      "expected_revision": "1becf1940023ebbf",
+      "answer": "A",
+      "computed": 8,
+      "verification": "49%11=5，5、6、7已占用，首个空位为8。"
+    },
+    "408-0700c57ff439d707ba903755": {
+      "expected_revision": "777765032ce68e25",
+      "answer": "A",
+      "computed": 1.25,
+      "verification": "中断频率=50000B/s÷4B；乘每次1000周期再除1GHz，换算百分数。"
+    },
+    "408-07c9f93d04a85204f785c4b1": {
+      "expected_revision": "2c1d778e9ffa0484",
+      "answer": "C",
+      "computed": [
+        805306368,
+        1073741823
+      ],
+      "verification": "30位字节空间，RAM占低3/4，ROM为最高1/4。"
+    },
+    "408-08e3bcf2bf842219db8e2cb7": {
+      "expected_revision": "3b5509dcc998a8bb",
+      "answer": "A",
+      "computed": [
+        2,
+        8
+      ],
+      "verification": "按字编址，512字偏移9位，8组索引3位，Tag为8位，2路并行比较。"
+    },
+    "408-09b6f9747ee681f1642676e2": {
+      "expected_revision": "7c9ffcf6a1e26a25",
+      "answer": "D",
+      "computed": 4522,
+      "verification": "寻址特征(2222H>>8)&3=2，使用X2=1188H，形式地址22H。"
+    },
+    "408-00739878c5a20d6fe0829764": {
+      "expected_revision": "bec7789627cc0673",
+      "answer": "C",
+      "computed": 2,
+      "verification": "两类设备各需一种驱动，数量不随相同设备台数增加。"
+    },
+    "408-06ce6d99ea981e89ce2417d1": {
+      "expected_revision": "6703bd3a9fab167d",
+      "answer": "D",
+      "computed": [
+        1,
+        3,
+        2
+      ],
+      "verification": "同到达且非抢占，短作业优先2h、3h、5h使完成时间总和最小。"
+    },
+    "408-0afc21f7c1db0f8a6de61487": {
+      "expected_revision": "62dfda9749508ba8",
+      "answer": "B",
+      "computed": 5,
+      "verification": "确保无死锁需m>=n(k-1)+1，因此n<=5。"
+    },
+    "408-0c3f5200c888304add02b184": {
+      "expected_revision": "bcda695ba3032df7",
+      "answer": "C",
+      "computed": 2.0,
+      "verification": "3000转/分为50转/秒，每圈20ms，10个等长扇区每个传输2ms。"
+    },
+    "408-0ea31f1e01368beb72337125": {
+      "expected_revision": "92a104ba1fdbe617",
+      "answer": "C",
+      "computed": 3.0,
+      "verification": "响应比=(等待2h+服务1h)/服务1h=3。"
+    },
+    "408-0f649e45091621de3fad84f3": {
+      "expected_revision": "3dfab405b4810f15",
+      "answer": "A",
+      "computed": 1,
+      "verification": "缓冲区互斥信号量初值1，与生产者/消费者数量和容量无关。"
+    },
+    "408-062de8c98734f724bb4d985b": {
+      "expected_revision": "354bbcda6ea13b72",
+      "answer": "A",
+      "computed": 80.0,
+      "verification": "OSI七层中除应用层与物理层外共5层，各引入20B。"
+    },
+    "408-07f177f056026d170959013f": {
+      "expected_revision": "ee88600c3ef79651",
+      "answer": "B",
+      "computed": [
+        9,
+        9
+      ],
+      "verification": "慢启动窗口1、2、4、8KB需要3RTT；此前收到1+2+4=7KB，接收缓冲余9KB。"
+    },
+    "408-0a2ab26c76878a1c0007ba07": {
+      "expected_revision": "d22cbcd60da6086c",
+      "answer": "A",
+      "computed": 2.0,
+      "verification": "最远站间经Hub单程200m，往返400m，传播速率2e8m/s，结果2us。"
+    },
+    "408-0fd942d8b4d9e74ae8e9276f": {
+      "expected_revision": "73081e81d2519d7b",
+      "answer": "A",
+      "computed": 20.0,
+      "verification": "传播时延1ms等于发送时延，20Mbit/s×1ms=20kbit。"
+    },
+    "408-c6d6516fd8d184f92cebb8ae": {
+      "expected_revision": "fa5367e4d7429863",
+      "answer": "B",
+      "computed": 87,
+      "verification": "三对角矩阵首行2项，前28个完整中间行各3项，第30行对角线为第2项，零起始下标87。"
+    },
+    "408-781f84b06ed124d38520705f": {
+      "expected_revision": "6b0ee36006b305af",
+      "answer": "A",
+      "computed": 50,
+      "verification": "上三角按行，m6,6前5行分别有12、11、10、9、8项，零起始下标50。"
+    },
+    "408-2810210e0b0e005abbfcd76d": {
+      "expected_revision": "208452226b5caf68",
+      "answer": "C",
+      "computed": 22,
+      "verification": "上三角按列，m2,7前6列有21项，再加行内偏移1，零起始下标22。"
+    },
+    "408-de5504c9b6a3313307ad4c6c": {
+      "expected_revision": "249ffea12007887d",
+      "answer": "B",
+      "computed": 82,
+      "verification": "树边数n-1等于总度数，叶数=1+Σ(d-1)nd=82。"
+    },
+    "408-2e81a67910a77a91f602d7a2": {
+      "expected_revision": "9dcae66b200dcddc",
+      "answer": "C",
+      "computed": 111,
+      "verification": "问最多：树高7且前6层满，第6层8个叶子使第7层缺16个结点。"
+    },
+    "408-ce094053e3f7f2b1caf564e7": {
+      "expected_revision": "f5e1a8590a527778",
+      "answer": "D",
+      "computed": 1896,
+      "verification": "孩子兄弟表示中，每个原树分支结点的孩子链末尾无右孩子，加根结点，共1896。"
+    },
+    "408-391bd9477ba12ff5c674ee71": {
+      "expected_revision": "915f0ae90e79983c",
+      "answer": "C",
+      "computed": 16,
+      "verification": "最多非连通图是K6加一个孤立点，有15边；16边保证任意简单无向图连通。"
+    },
+    "408-469d7a28e51779b66fdcf016": {
+      "expected_revision": "125dcccd57080446",
+      "answer": "B",
+      "computed": 11,
+      "verification": "度数总和32；已用24，其他顶点度至多2，至少另需4个顶点。"
+    },
+    "408-e832b47f3d0924f6dbb9b0e0": {
+      "expected_revision": "2cf23e9082432798",
+      "answer": "D",
+      "computed": 15,
+      "verification": "按空树高0：高1为1形，高2为3形；高3子树高度(2,2)/(2,1)/(1,2)，共15。"
+    },
+    "408-51657da08fa983164a521c97": {
+      "expected_revision": "33ee3a231129790e",
+      "answer": "D",
+      "computed": 70.0,
+      "verification": "CPU速度提高50%使CPU时间除以1.5，加不变10s的I/O时间，得到70s。"
+    },
+    "408-67f5c2e670ba96785910611d": {
+      "expected_revision": "fcf9ef84e2d2ae49",
+      "answer": "B",
+      "computed": 46,
+      "verification": "三叉哈夫曼树补一个0权虚叶，依次合并0,2,3→5；4,5,5→14；6,7,14→27，WPL=46。"
+    },
+    "408-04e40feb1614fae0c16bc8c8": {
+      "expected_revision": "250a111c2ea812b9",
+      "answer": "C",
+      "computed": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "verification": "要求a、b、c三个码片向量两两正交，不仅分别与a正交。"
+    }
+  }
+}

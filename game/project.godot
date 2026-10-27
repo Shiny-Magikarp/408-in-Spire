@@ -1,0 +1,22 @@
+config_version=5
+
+[application]
+config/name="408 in Spire — UI Preview"
+run/main_scene="res://Spire408/Scenes/Preview.tscn"
+config/features=PackedStringArray("4.5", "C#", "GL Compatibility")
+
+[display]
+window/size/viewport_width=1440
+window/size/viewport_height=900
+window/stretch/mode="canvas_items"
+
+[dotnet]
+project/assembly_name="Spire408"
+
+[editor_plugins]
+enabled=PackedStringArray("res://addons/spire408_native_ui/plugin.cfg")
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+

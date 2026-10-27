@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/tickbox.tscn" id="1"]
+[ext_resource type="Script" path="res://Spire408/UI/SpireTickbox.cs" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/selection_reticle.tscn" id="3"]
+
+[node name="SpireTickbox" type="Control" node_paths=PackedStringArray("CaptionLabel")]
+custom_minimum_size = Vector2(380, 54)
+layout_mode = 3
+focus_mode = 2
+mouse_filter = 1
+script = ExtResource("2")
+CaptionLabel = NodePath("CaptionLabel")
+
+[node name="TickboxVisuals" parent="." instance=ExtResource("1")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = -5.0
+offset_right = 64.0
+offset_bottom = 59.0
+
+[node name="CaptionLabel" type="Label" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+mouse_filter = 2
+vertical_alignment = 1
+text = "启用"
+
+[node name="SelectionReticle" parent="." instance=ExtResource("3")]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 4.0
+offset_bottom = 2.0

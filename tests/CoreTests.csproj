@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net9.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup><Compile Include="../game/Spire408/Core/*.cs" Link="Core/%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup><Compile Include="../game/Spire408/AI/*.cs" Link="AI/%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup><PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.27.1" /></ItemGroup>
+  <ItemGroup><Compile Remove="GameSmoke.cs" /></ItemGroup>
+</Project>

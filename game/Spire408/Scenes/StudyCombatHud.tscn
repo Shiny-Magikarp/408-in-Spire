@@ -1,0 +1,140 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://Spire408/UI/StudyCombatHud.cs" id="1"]
+[ext_resource type="Texture2D" path="res://Spire408/Art/knowledge_resource.res" id="2"]
+[ext_resource type="FontVariation" path="res://themes/kreon_bold_glyph_space_two.tres" id="3"]
+[ext_resource type="Script" path="res://Spire408/UI/StudyKnowledgeButton.cs" id="4"]
+
+[sub_resource type="CanvasItemMaterial" id="GlowMaterial"]
+blend_mode = 1
+
+[sub_resource type="Animation" id="Idle"]
+resource_name = "idle"
+length = 2.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("HoverMotion/Motion:scale")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0, 1.2, 2.4), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1.012, 1.012), Vector2(1, 1)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HoverMotion/Motion/Glow:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0, 1.2, 2.4), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(0.5, 0.86, 0.78, 0.035), Color(0.5, 0.86, 0.78, 0.085), Color(0.5, 0.86, 0.78, 0.035)]}
+
+[sub_resource type="Animation" id="Active"]
+resource_name = "active"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("HoverMotion/Motion:scale")
+tracks/0/interp = 1
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.6, 1.2), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1.025, 1.025), Vector2(1.055, 1.055), Vector2(1.025, 1.025)]}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HoverMotion/Motion/Glow:modulate")
+tracks/1/interp = 1
+tracks/1/keys = {"times": PackedFloat32Array(0, 0.6, 1.2), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Color(0.5, 1, 0.84, 0.3), Color(0.6, 1, 0.88, 0.65), Color(0.5, 1, 0.84, 0.3)]}
+
+[sub_resource type="AnimationLibrary" id="States"]
+_data = {"idle": SubResource("Idle"), "active": SubResource("Active")}
+
+[node name="StudyCombatHud" type="Control" node_paths=PackedStringArray("Emblem", "RemainingLabel", "GoldLabel", "ActivationButton")]
+layout_mode = 1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -490.0
+offset_right = 184.0
+offset_bottom = -316.0
+mouse_filter = 2
+script = ExtResource("1")
+Emblem = NodePath("ActivationButton/HoverMotion/Motion/Emblem")
+RemainingLabel = NodePath("ActivationButton/HoverMotion/Motion/Remaining")
+GoldLabel = NodePath("Gold")
+ActivationButton = NodePath("ActivationButton")
+
+[node name="ActivationButton" type="Control" parent="." node_paths=PackedStringArray("HoverMotion", "AnimatedMotion", "Glow", "Animations")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 22.0
+offset_right = 148.0
+offset_bottom = 150.0
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("4")
+HoverMotion = NodePath("HoverMotion")
+AnimatedMotion = NodePath("HoverMotion/Motion")
+Glow = NodePath("HoverMotion/Motion/Glow")
+Animations = NodePath("Animations")
+
+[node name="HoverMotion" type="Control" parent="ActivationButton"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+pivot_offset = Vector2(68, 64)
+mouse_filter = 2
+
+[node name="Motion" type="Control" parent="ActivationButton/HoverMotion"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+pivot_offset = Vector2(68, 64)
+mouse_filter = 2
+
+[node name="Glow" type="TextureRect" parent="ActivationButton/HoverMotion/Motion"]
+material = SubResource("GlowMaterial")
+modulate = Color(0.5, 0.86, 0.78, 0.035)
+layout_mode = 0
+offset_left = -2.0
+offset_top = -6.0
+offset_right = 138.0
+offset_bottom = 134.0
+mouse_filter = 2
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Emblem" type="TextureRect" parent="ActivationButton/HoverMotion/Motion"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 126.0
+offset_bottom = 122.0
+mouse_filter = 2
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Remaining" type="Label" parent="ActivationButton/HoverMotion/Motion"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 45.0
+offset_right = 126.0
+offset_bottom = 103.0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 42
+theme_override_colors/font_color = Color(1, 0.96, 0.81, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.12, 0.13, 1)
+theme_override_constants/outline_size = 8
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Animations" type="AnimationPlayer" parent="ActivationButton"]
+root_node = NodePath("..")
+libraries = {&"": SubResource("States")}
+
+[node name="Gold" type="Label" parent="."]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 160.0
+offset_bottom = 178.0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 21
+theme_override_colors/font_color = Color(1, 0.84, 0.4, 1)
+theme_override_colors/font_outline_color = Color(0.07, 0.08, 0.05, 1)
+theme_override_constants/outline_size = 6
+text = "答题金币 0/30"
+horizontal_alignment = 1

@@ -1,0 +1,14 @@
+{
+  "godot": {
+    "url": "https://github.com/godotengine/godot/releases/download/4.5.1-stable/Godot_v4.5.1-stable_mono_win64.zip",
+    "file": "godot-mono.zip",
+    "sha256": "8CE2346C05C8A9674AB267B4A0A7E2764A6E47DA730713AA932C2A6DB774A239",
+    "directory": "godot"
+  },
+  "ritsulib": {
+    "url": "https://github.com/BAKAOLC/STS2-RitsuLib/releases/download/v0.6.9/STS2.RitsuLib.0.6.9.github.zip",
+    "file": "ritsulib.zip",
+    "sha256": "8A8ACA22FE0F72F33003370A854500CEE0F03FABEFFC7D1A053E2EAA5023AFAD",
+    "directory": "ritsulib"
+  }
+}

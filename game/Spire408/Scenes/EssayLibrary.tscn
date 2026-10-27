@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=3]
+[ext_resource type="Script" path="res://Spire408/UI/EssayLibrary.cs" id="1"]
+[ext_resource type="Theme" path="res://Spire408/Scenes/StudyTheme.tres" id="2"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireButton.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireCancelButton.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireDropdown.tscn" id="5"]
+[sub_resource type="StyleBoxFlat" id="Input"]
+bg_color = Color(0.05, 0.10, 0.13, 0.95)
+content_margin_left = 14.0
+content_margin_right = 14.0
+content_margin_top = 12.0
+content_margin_bottom = 12.0
+
+[node name="EssayLibrary" type="Control" node_paths=PackedStringArray("Summary", "Description", "Search", "QuestionSelect", "Open", "Back")]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("2")
+script = ExtResource("1")
+Summary = NodePath("Panel/Body/Summary")
+Description = NodePath("Panel/Body/Scroll/Description")
+Search = NodePath("Panel/Body/Search")
+QuestionSelect = NodePath("Panel/Body/SelectRow/QuestionSelect")
+Open = NodePath("Panel/Body/Actions/Open")
+Back = NodePath("Panel/Body/Actions/Back")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.015, 0.025, 0.04, 0.85)
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.09
+anchor_top = 0.07
+anchor_right = 0.91
+anchor_bottom = 0.93
+
+[node name="Body" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Heading" type="Label" parent="Panel/Body"]
+layout_mode = 2
+text = "408 大题题库"
+theme_override_font_sizes/font_size = 34
+theme_override_colors/font_color = Color(0.937, 0.784, 0.318, 1)
+
+[node name="Summary" type="Label" parent="Panel/Body"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 22
+text = "正在读取大题…"
+
+[node name="Search" type="LineEdit" parent="Panel/Body"]
+layout_mode = 2
+placeholder_text = "搜索年份、题号、科目、知识点或题干…"
+theme_override_styles/normal = SubResource("Input")
+theme_override_styles/focus = SubResource("Input")
+theme_override_colors/font_color = Color(1, 0.965, 0.886, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="SelectRow" type="Control" parent="Panel/Body"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 64)
+
+[node name="QuestionSelect" parent="Panel/Body/SelectRow" instance=ExtResource("5")]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="Scroll" type="ScrollContainer" parent="Panel/Body"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Description" type="Label" parent="Panel/Body/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 24
+text = "选择一道题，进入练习。"
+
+[node name="Actions" type="HBoxContainer" parent="Panel/Body"]
+layout_mode = 2
+alignment = 2
+theme_override_constants/separation = 32
+
+[node name="Back" parent="Panel/Body/Actions" instance=ExtResource("4")]
+layout_mode = 2
+Caption = "返回复习计划"
+
+[node name="Open" parent="Panel/Body/Actions" instance=ExtResource("3")]
+layout_mode = 2
+Caption = "练习此题"

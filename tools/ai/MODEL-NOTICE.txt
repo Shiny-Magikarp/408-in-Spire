@@ -1,0 +1,18 @@
+Wakuu NLI 408 development model, version wakuu-nli-408-dev1.
+
+Base model: IDEA-CCNL/Erlangshen-Roberta-110M-NLI
+Pinned revision: 864d25be3ce5e90d9193cb49d9fbd52722cdc6b0
+Source: https://huggingface.co/IDEA-CCNL/Erlangshen-Roberta-110M-NLI
+Publisher: IDEA-CCNL / Fengshenbang-LM
+License declared by publisher: Apache License 2.0; see LICENSE.txt.
+
+Changes by 408 in Spire contributors on 2026-10-22:
+- Adapted the final two transformer layers, pooler and NLI classification head
+  on 240 explicitly labelled, project-authored Chinese computer-science pairs.
+- Exported ONNX and selected FP16 after development regression comparisons.
+- Packaged a Chinese WordPiece vocabulary and fixed scoring-point interface.
+
+This is a small development model, not a validated general exam-marking system.
+Use with the supplied rubric, conservative thresholds and review indicators.
+Training and validation data are included in tools/ai in the source project.
+No game answers or player submissions are sent to external services.

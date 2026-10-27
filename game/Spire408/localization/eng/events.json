@@ -1,0 +1,9 @@
+{
+  "SPIRE408_CHALLENGE.title": "大题挑战",
+  "SPIRE408_CHALLENGE.description": "完成一道 408 大题，由离线瓦库核对评分点。按得分获得最多 40 金币，高分可获稀有卡或遗物，每幕额外奖励最多一次。结算后保留原选项代价：{Cost}。暂存或放弃不收取该代价。",
+  "SPIRE408_CHALLENGE.locked": "{Reason}。可选择其他选项或离开。原选项金币收入已关闭。",
+  "SPIRE408_CHALLENGE.leave": "你收起教材，离开了这里。本次没有领取奖励，也没有执行原金币选项的代价。",
+  "SPIRE408_LEAVE.title": "离开",
+  "SPIRE408_LEAVE.description": "放弃本次事件，不领取大题奖励，不支付原金币选项的代价。",
+  "SPIRE408_CHALLENGE.finished": "瓦库记录了这次作答：{Score}/100 分，结算 {Gold} 金币。原选项代价已执行：{Cost}。"
+}

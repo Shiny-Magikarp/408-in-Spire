@@ -1,0 +1,221 @@
+[gd_scene load_steps=8 format=3]
+[ext_resource type="Script" path="res://Spire408/UI/QuizPanel.cs" id="1"]
+[ext_resource type="Theme" path="res://Spire408/Scenes/StudyTheme.tres" id="2"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireTickbox.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireButton.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireCancelButton.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireDropdown.tscn" id="6"]
+[ext_resource type="Texture2D" path="res://Spire408/Art/study_book.res" id="7"]
+
+[node name="QuizPanel" type="Control" node_paths=PackedStringArray("Heading", "Progress", "Stem", "Feedback", "Explanation", "Scroll", "Submit", "Skip", "OptionA", "PickA", "OptionB", "PickB", "OptionC", "PickC", "OptionD", "PickD")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2")
+script = ExtResource("1")
+Heading = NodePath("Panel/Body/Heading")
+Progress = NodePath("Panel/Body/Progress")
+Stem = NodePath("Panel/Body/Scroll/Content/Stem")
+Feedback = NodePath("Panel/Body/Scroll/Content/Feedback")
+Explanation = NodePath("Panel/Body/Scroll/Content/Explanation")
+Scroll = NodePath("Panel/Body/Scroll")
+Submit = NodePath("Panel/Body/Actions/Submit")
+Skip = NodePath("Panel/Body/Actions/Skip")
+OptionA = NodePath("Panel/Body/Scroll/Content/RowA/Text")
+PickA = NodePath("Panel/Body/Scroll/Content/RowA/Pick")
+OptionB = NodePath("Panel/Body/Scroll/Content/RowB/Text")
+PickB = NodePath("Panel/Body/Scroll/Content/RowB/Pick")
+OptionC = NodePath("Panel/Body/Scroll/Content/RowC/Text")
+PickC = NodePath("Panel/Body/Scroll/Content/RowC/Pick")
+OptionD = NodePath("Panel/Body/Scroll/Content/RowD/Text")
+PickD = NodePath("Panel/Body/Scroll/Content/RowD/Pick")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+color = Color(0.015, 0.025, 0.04, 0.80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.055
+anchor_right = 0.93
+anchor_bottom = 0.945
+
+[node name="Body" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Kicker" type="Label" parent="Panel/Body"]
+layout_mode = 2
+text = "408 IN SPIRE   /   战斗复习"
+theme_override_font_sizes/font_size = 16
+modulate = Color(0.86, 0.73, 0.47, 1)
+
+[node name="Heading" type="Label" parent="Panel/Body"]
+layout_mode = 2
+text = "数据结构 / 线性表"
+theme_override_font_sizes/font_size = 28
+theme_override_colors/font_color = Color(0.937, 0.784, 0.318, 1)
+
+[node name="Progress" type="Label" parent="Panel/Body"]
+layout_mode = 2
+text = "本场已赚 0 / 25 金币"
+theme_override_font_sizes/font_size = 18
+modulate = Color(0.67, 0.76, 0.82, 1)
+
+[node name="Scroll" type="ScrollContainer" parent="Panel/Body"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Content" type="VBoxContainer" parent="Panel/Body/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 18
+
+[node name="Stem" type="RichTextLabel" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+selection_enabled = true
+mouse_filter = 1
+
+[node name="RowA" type="HBoxContainer" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Pick" instance=ExtResource("3") parent="Panel/Body/Scroll/Content/RowA"]
+layout_mode = 2
+Caption = "A"
+custom_minimum_size = Vector2(100, 54)
+size_flags_vertical = 0
+InitiallyTicked = false
+
+[node name="Text" type="RichTextLabel" parent="Panel/Body/Scroll/Content/RowA"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+selection_enabled = true
+mouse_filter = 1
+
+[node name="RowB" type="HBoxContainer" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Pick" instance=ExtResource("3") parent="Panel/Body/Scroll/Content/RowB"]
+layout_mode = 2
+Caption = "B"
+custom_minimum_size = Vector2(100, 54)
+size_flags_vertical = 0
+InitiallyTicked = false
+
+[node name="Text" type="RichTextLabel" parent="Panel/Body/Scroll/Content/RowB"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+selection_enabled = true
+mouse_filter = 1
+
+[node name="RowC" type="HBoxContainer" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Pick" instance=ExtResource("3") parent="Panel/Body/Scroll/Content/RowC"]
+layout_mode = 2
+Caption = "C"
+custom_minimum_size = Vector2(100, 54)
+size_flags_vertical = 0
+InitiallyTicked = false
+
+[node name="Text" type="RichTextLabel" parent="Panel/Body/Scroll/Content/RowC"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+selection_enabled = true
+mouse_filter = 1
+
+[node name="RowD" type="HBoxContainer" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Pick" instance=ExtResource("3") parent="Panel/Body/Scroll/Content/RowD"]
+layout_mode = 2
+Caption = "D"
+custom_minimum_size = Vector2(100, 54)
+size_flags_vertical = 0
+InitiallyTicked = false
+
+[node name="Text" type="RichTextLabel" parent="Panel/Body/Scroll/Content/RowD"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+selection_enabled = true
+mouse_filter = 1
+
+[node name="Feedback" type="Label" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+text = ""
+visible = false
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 24
+
+[node name="Explanation" type="RichTextLabel" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+visible = false
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+selection_enabled = true
+mouse_filter = 1
+
+[node name="Actions" type="HBoxContainer" parent="Panel/Body"]
+layout_mode = 2
+alignment = 2
+theme_override_constants/separation = 32
+
+[node name="Hint" type="Label" parent="Panel/Body/Actions"]
+layout_mode = 2
+text = "A / B / C / D 选择    Enter 提交"
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="Skip" instance=ExtResource("5") parent="Panel/Body/Actions"]
+layout_mode = 2
+Caption = "跳过"
+
+[node name="Submit" instance=ExtResource("4") parent="Panel/Body/Actions"]
+layout_mode = 2
+Caption = "提交答案"
+
+[node name="Textbook" type="TextureRect" parent="."]
+layout_mode = 1
+anchor_left = 0.93
+anchor_top = 0.055
+anchor_right = 0.93
+anchor_bottom = 0.055
+offset_left = -180.0
+offset_top = 44.0
+offset_right = -60.0
+offset_bottom = 164.0
+mouse_filter = 2
+texture = ExtResource("7")
+expand_mode = 1
+stretch_mode = 5

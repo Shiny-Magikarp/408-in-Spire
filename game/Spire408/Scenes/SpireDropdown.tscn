@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/screens/settings_dropdown.tscn" id="1"]
+[ext_resource type="Script" path="res://Spire408/UI/SpireDropdown.cs" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/dropdown_item.tscn" id="3"]
+
+[node name="SpireDropdown" instance=ExtResource("1")]
+custom_minimum_size = Vector2(600, 54)
+focus_mode = 2
+mouse_filter = 1
+script = ExtResource("2")
+ItemScene = ExtResource("3")
+
+[node name="DropdownContainer" parent="Container" index="2"]
+anchor_left = 0.0
+anchor_right = 1.0
+offset_left = 0.0
+offset_right = 0.0
+offset_top = 54.0
+offset_bottom = 494.0
+
+[node name="Scrollbar" parent="Container/DropdownContainer" index="2"]
+anchor_left = 1.0
+offset_left = -32.0

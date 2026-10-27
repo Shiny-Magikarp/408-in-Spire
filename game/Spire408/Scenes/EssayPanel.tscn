@@ -1,0 +1,230 @@
+[gd_scene load_steps=7 format=3]
+[ext_resource type="Script" path="res://Spire408/UI/EssayPanel.cs" id="1"]
+[ext_resource type="Theme" path="res://Spire408/Scenes/StudyTheme.tres" id="2"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireButton.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireCancelButton.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Spire408/Scenes/SpireTickbox.tscn" id="5"]
+[sub_resource type="StyleBoxFlat" id="Input"]
+bg_color = Color(0.05, 0.10, 0.13, 0.92)
+border_color = Color(0.36, 0.47, 0.51, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_top = 2
+border_width_bottom = 2
+content_margin_left = 14.0
+content_margin_right = 14.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+[node name="EssayPanel" type="Control" node_paths=PackedStringArray("Heading", "Rules", "Stem", "Feedback", "Scroll", "Submit", "Back", "Abandon", "DraftTimer", "Part1", "Prompt1", "Answer1", "Part2", "Prompt2", "Answer2", "Part3", "Prompt3", "Answer3", "Part4", "Prompt4", "Answer4", "Previous", "Next", "Page", "WrongToggle")]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("2")
+script = ExtResource("1")
+Heading = NodePath("Panel/Body/Heading")
+Rules = NodePath("Panel/Body/Rules")
+Stem = NodePath("Panel/Body/Scroll/Content/Stem")
+Feedback = NodePath("Panel/Body/Scroll/Content/Feedback")
+Scroll = NodePath("Panel/Body/Scroll")
+Submit = NodePath("Panel/Body/Actions/Submit")
+Back = NodePath("Panel/Body/Actions/Back")
+Abandon = NodePath("Panel/Body/Actions/Abandon")
+DraftTimer = NodePath("DraftTimer")
+Previous = NodePath("Panel/Body/Paging/Previous")
+Next = NodePath("Panel/Body/Paging/Next")
+Page = NodePath("Panel/Body/Paging/Page")
+WrongToggle = NodePath("Panel/Body/Wrong")
+Part1 = NodePath("Panel/Body/Scroll/Content/Part1")
+Prompt1 = NodePath("Panel/Body/Scroll/Content/Part1/Prompt")
+Answer1 = NodePath("Panel/Body/Scroll/Content/Part1/Answer")
+Part2 = NodePath("Panel/Body/Scroll/Content/Part2")
+Prompt2 = NodePath("Panel/Body/Scroll/Content/Part2/Prompt")
+Answer2 = NodePath("Panel/Body/Scroll/Content/Part2/Answer")
+Part3 = NodePath("Panel/Body/Scroll/Content/Part3")
+Prompt3 = NodePath("Panel/Body/Scroll/Content/Part3/Prompt")
+Answer3 = NodePath("Panel/Body/Scroll/Content/Part3/Answer")
+Part4 = NodePath("Panel/Body/Scroll/Content/Part4")
+Prompt4 = NodePath("Panel/Body/Scroll/Content/Part4/Prompt")
+Answer4 = NodePath("Panel/Body/Scroll/Content/Part4/Answer")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.015, 0.025, 0.04, 0.85)
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.04
+anchor_right = 0.93
+anchor_bottom = 0.96
+
+[node name="Body" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Heading" type="Label" parent="Panel/Body"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.937, 0.784, 0.318, 1)
+autowrap_mode = 3
+text = "瓦库的大题挑战"
+
+[node name="Rules" type="Label" parent="Panel/Body"]
+layout_mode = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 18
+text = "瓦库将在本地核对评分点。"
+
+[node name="Wrong" parent="Panel/Body" instance=ExtResource("5")]
+layout_mode = 2
+Caption = "加入大题错题本 · 自查后可手动标记或取消"
+
+[node name="Scroll" type="ScrollContainer" parent="Panel/Body"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Content" type="VBoxContainer" parent="Panel/Body/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="Stem" type="RichTextLabel" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+text = "综合题题干"
+
+[node name="Part1" type="VBoxContainer" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Prompt" type="Label" parent="Panel/Body/Scroll/Content/Part1"]
+layout_mode = 2
+autowrap_mode = 3
+text = "小问 1"
+
+[node name="Answer" type="TextEdit" parent="Panel/Body/Scroll/Content/Part1"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 100)
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("Input")
+theme_override_styles/focus = SubResource("Input")
+theme_override_colors/font_color = Color(1, 0.965, 0.886, 1)
+theme_override_font_sizes/font_size = 23
+wrap_mode = 1
+placeholder_text = "写下答案…"
+context_menu_enabled = true
+
+[node name="Part2" type="VBoxContainer" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Prompt" type="Label" parent="Panel/Body/Scroll/Content/Part2"]
+layout_mode = 2
+autowrap_mode = 3
+text = "小问 2"
+
+[node name="Answer" type="TextEdit" parent="Panel/Body/Scroll/Content/Part2"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 100)
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("Input")
+theme_override_styles/focus = SubResource("Input")
+theme_override_colors/font_color = Color(1, 0.965, 0.886, 1)
+theme_override_font_sizes/font_size = 23
+wrap_mode = 1
+placeholder_text = "写下答案…"
+context_menu_enabled = true
+
+[node name="Part3" type="VBoxContainer" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Prompt" type="Label" parent="Panel/Body/Scroll/Content/Part3"]
+layout_mode = 2
+autowrap_mode = 3
+text = "小问 3"
+
+[node name="Answer" type="TextEdit" parent="Panel/Body/Scroll/Content/Part3"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 100)
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("Input")
+theme_override_styles/focus = SubResource("Input")
+theme_override_colors/font_color = Color(1, 0.965, 0.886, 1)
+theme_override_font_sizes/font_size = 23
+wrap_mode = 1
+placeholder_text = "写下答案…"
+context_menu_enabled = true
+
+[node name="Part4" type="VBoxContainer" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Prompt" type="Label" parent="Panel/Body/Scroll/Content/Part4"]
+layout_mode = 2
+autowrap_mode = 3
+text = "小问 4"
+
+[node name="Answer" type="TextEdit" parent="Panel/Body/Scroll/Content/Part4"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 100)
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("Input")
+theme_override_styles/focus = SubResource("Input")
+theme_override_colors/font_color = Color(1, 0.965, 0.886, 1)
+theme_override_font_sizes/font_size = 23
+wrap_mode = 1
+placeholder_text = "写下答案…"
+context_menu_enabled = true
+
+[node name="Feedback" type="RichTextLabel" parent="Panel/Body/Scroll/Content"]
+layout_mode = 2
+visible = false
+fit_content = true
+scroll_active = false
+bbcode_enabled = true
+selection_enabled = true
+
+[node name="Paging" type="HBoxContainer" parent="Panel/Body"]
+layout_mode = 2
+alignment = 2
+theme_override_constants/separation = 20
+
+[node name="Previous" parent="Panel/Body/Paging" instance=ExtResource("4")]
+layout_mode = 2
+Caption = "上一页"
+
+[node name="Page" type="Label" parent="Panel/Body/Paging"]
+layout_mode = 2
+text = "评分点 1 / 1"
+
+[node name="Next" parent="Panel/Body/Paging" instance=ExtResource("3")]
+layout_mode = 2
+Caption = "下一页"
+
+[node name="Actions" type="HBoxContainer" parent="Panel/Body"]
+layout_mode = 2
+alignment = 2
+theme_override_constants/separation = 32
+
+[node name="Back" parent="Panel/Body/Actions" instance=ExtResource("4")]
+layout_mode = 2
+Caption = "暂存返回"
+
+[node name="Abandon" parent="Panel/Body/Actions" instance=ExtResource("4")]
+layout_mode = 2
+Caption = "放弃事件"
+
+[node name="Submit" parent="Panel/Body/Actions" instance=ExtResource("3")]
+layout_mode = 2
+Caption = "提交作答"
+
+[node name="DraftTimer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true

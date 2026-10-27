@@ -1,0 +1,45 @@
+[gd_resource type="Theme" load_steps=8 format=3]
+
+[ext_resource type="FontVariation" path="res://themes/kreon_regular_shared.tres" id="1"]
+[ext_resource type="Texture2D" path="res://images/atlases/ui_atlas.sprites/popup_vertical.tres" id="2"]
+[ext_resource type="Texture2D" path="res://images/packed/common_ui/small_scrollbar_track_center.png" id="3"]
+[ext_resource type="Texture2D" path="res://images/packed/common_ui/small_scrollbar_train.png" id="4"]
+
+[sub_resource type="StyleBoxTexture" id="Panel"]
+texture = ExtResource("2")
+texture_margin_left = 80.0
+texture_margin_top = 110.0
+texture_margin_right = 80.0
+texture_margin_bottom = 110.0
+content_margin_left = 70.0
+content_margin_top = 55.0
+content_margin_right = 70.0
+content_margin_bottom = 55.0
+modulate_color = Color(0.68, 0.77, 0.83, 1)
+
+[sub_resource type="StyleBoxTexture" id="Track"]
+texture = ExtResource("3")
+modulate_color = Color(0.4, 0.4, 0.4, 0.65)
+texture_margin_left = 6.0
+texture_margin_right = 6.0
+
+[sub_resource type="StyleBoxTexture" id="Grabber"]
+texture = ExtResource("4")
+texture_margin_top = 20.0
+texture_margin_bottom = 20.0
+modulate_color = Color(0.8, 0.8, 0.8, 0.8)
+
+[resource]
+default_font = ExtResource("1")
+default_font_size = 24
+PanelContainer/styles/panel = SubResource("Panel")
+Label/colors/font_color = Color(1, 0.965, 0.886, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.4)
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 2
+RichTextLabel/colors/default_color = Color(1, 0.965, 0.886, 1)
+RichTextLabel/constants/line_separation = 5
+VScrollBar/styles/scroll = SubResource("Track")
+VScrollBar/styles/grabber = SubResource("Grabber")
+VScrollBar/styles/grabber_highlight = SubResource("Grabber")
+VScrollBar/styles/grabber_pressed = SubResource("Grabber")

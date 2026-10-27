@@ -1,0 +1,21 @@
+name: Source checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+      - run: python -m compileall -q tools
+      - run: python -m unittest discover -s tools -p test_import_questions.py -v
+      - run: python -m unittest discover -s tools -p test_semantic_rubrics.py -v
+      - run: dotnet build tests/CoreTests.csproj --nologo
+      # Full game/model tests run locally with a legal game installation, the
+      # separately imported question bank and locally trained offline weights.
