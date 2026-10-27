@@ -10,7 +10,8 @@ internal static class AiChecks
         int checks=0;
         void Check(bool ok,string description)
         { if(!ok) throw new Exception(description); checks++; Console.WriteLine("PASS "+description); }
-        WakuuJudge.ModelDirectory=Path.Combine(root,"models/wakuu");
+        string? modelOverride=Environment.GetEnvironmentVariable("SPIRE408_AI_TEST_MODEL");
+        WakuuJudge.ModelDirectory=string.IsNullOrWhiteSpace(modelOverride) ? Path.Combine(root,"models/wakuu") : Path.GetFullPath(modelOverride);
         Check(WakuuJudge.FilesPresent,"packaged local model and tokenizer exist");
         var tokenizer=new ChineseWordPiece(Path.Combine(WakuuJudge.ModelDirectory,"vocab.txt"));
         using var fixture=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"tools/ai/tokenizer-fixtures.json")));
@@ -71,6 +72,21 @@ internal static class AiChecks
         File.WriteAllText(Path.Combine(root,"reports/wakuu-canonical-integration.json"),JsonSerializer.Serialize(new{questions=canonical,minimum,mean=(double)scoreSum/Math.Max(1,canonical),
             scope="Reference answers only: integration/coverage check, not grading accuracy."}));
         Check(canonical==124 && minimum>0,"all 124 newly graded essays execute their complete semantic checkpoint pipeline");
+        string freshPath=Path.Combine(root,".tools/ai/holdout-082.json");
+        if(File.Exists(freshPath) && WakuuJudge.Version.StartsWith("wakuu-nli-408-dev3",StringComparison.Ordinal))
+        {
+            using var fresh=JsonDocument.Parse(File.ReadAllText(freshPath));
+            int positive=0,trueAwards=0,falseAwards=0;
+            foreach(var row in fresh.RootElement.EnumerateArray())
+            {
+                var p=WakuuJudge.JudgeAnswer(row.GetProperty("premise").GetString()!,row.GetProperty("hypothesis").GetString()!);
+                bool award=p.Entailment>=.85 && p.Contradiction<.1;
+                if(row.GetProperty("label").GetInt32()==2) { positive++; if(award)trueAwards++; }
+                else if(award)falseAwards++;
+            }
+            Check(positive==48 && trueAwards>=39 && falseAwards<=5,
+                "082 fixed wording regression keeps correct-answer recall above 80 percent without exceeding the measured dev2 false-award baseline");
+        }
         Console.WriteLine($"AI CPU checks elapsed {stopwatch.Elapsed.TotalSeconds:F2}s");
         return checks;
     }

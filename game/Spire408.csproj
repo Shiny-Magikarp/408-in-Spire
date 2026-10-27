@@ -4,7 +4,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>Spire408</AssemblyName>
-    <Version>0.8.1</Version>
+    <Version>0.8.2</Version>
     <RootNamespace>Spire408</RootNamespace>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <GameData>$(MSBuildThisFileDirectory)..\..\data_sts2_windows_x86_64</GameData>

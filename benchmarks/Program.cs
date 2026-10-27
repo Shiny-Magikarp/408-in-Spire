@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Text.Json;
+using System.Security.Cryptography;
 using Spire408.AI;
 using Spire408.Core;
 
@@ -30,5 +31,10 @@ else
             entailment=p.Entailment,contradiction=p.Contradiction,neutral=p.Neutral});
     }
 }
-File.WriteAllText(Path.Combine(root,output),JsonSerializer.Serialize(new{model=WakuuJudge.Version,seconds=timer.Elapsed.TotalSeconds,records},new JsonSerializerOptions{WriteIndented=true}));
+using var manifest=JsonDocument.Parse(File.ReadAllText(Path.Combine(WakuuJudge.ModelDirectory,"model.json")));
+string dataset=Path.Combine(root,mode=="canonical"?"game/Spire408/Data/essays.json":mode);
+string datasetSha256=Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(dataset))).ToLowerInvariant();
+File.WriteAllText(Path.Combine(root,output),JsonSerializer.Serialize(new{model=WakuuJudge.Version,
+    model_sha256=manifest.RootElement.GetProperty("sha256").GetString(),dataset_sha256=datasetSha256,
+    seconds=timer.Elapsed.TotalSeconds,records},new JsonSerializerOptions{WriteIndented=true}));
 Console.WriteLine($"Benchmark complete: {records.Count} records, {timer.Elapsed.TotalSeconds:F1}s; {output}");

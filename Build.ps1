@@ -60,7 +60,7 @@ try {
     Copy-Item -LiteralPath 'tools/ai/ONNX-THIRD-PARTY-NOTICES.txt' -Destination 'dist/Spire408'
     Copy-Item -LiteralPath 'data/UPSTREAM-LICENSE.txt' -Destination 'dist/Spire408'
     Copy-Item -LiteralPath 'data/CS408-ESSAYS-LICENSE.txt','data/CS408-ESSAYS-README.md' -Destination 'dist/Spire408'
-    Copy-Item -LiteralPath 'docs/PLAYTEST.md','docs/WAKUU.md','docs/WAKUU-FULL.md','docs/WAKUU-081.md','docs/ESSAY-IMPORT.md','docs/QUESTION-QUALITY.md','docs/ACADEMIC-AUDIT.md','LICENSE','THIRD_PARTY_NOTICES.md' -Destination 'dist/Spire408'
+    Copy-Item -LiteralPath 'docs/PLAYTEST.md','docs/WAKUU.md','docs/WAKUU-FULL.md','docs/WAKUU-081.md','docs/WAKUU-082.md','docs/ESSAY-IMPORT.md','docs/QUESTION-QUALITY.md','docs/ACADEMIC-AUDIT.md','LICENSE','THIRD_PARTY_NOTICES.md' -Destination 'dist/Spire408'
     $packageBytes = (Get-ChildItem -LiteralPath 'dist/Spire408' -File -Recurse | Measure-Object -Property Length -Sum).Sum
     if ($packageBytes -gt 500000000) { throw "Installed payload exceeds 500 MB: $packageBytes bytes" }
     $releaseVersion = (Get-Content -Raw 'game/mod_manifest.json' | ConvertFrom-Json).version

@@ -1,6 +1,8 @@
-"""Authored challenge examples, never used for gradient updates/checkpoint selection.
+"""Authored historical diagnostic examples.
 
 These test short assertions, not the correctness of arbitrary programs or proofs.
+They were not used for initial dev2 gradients/selection. Following inspection,
+0.8.2 may use them for training/development, never as new independent evidence.
 They are authored development evidence, not independently human-labelled essays.
 """
 

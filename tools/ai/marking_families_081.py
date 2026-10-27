@@ -1,7 +1,9 @@
 """Authored factual marking families, not collected student/exam answers.
 
 Per subject: first four families train, next two develop, last six test.
-The test text must never be added to training or used to choose thresholds.
+For the original 0.8.1 experiment, test text was excluded from training and
+selection. After inspection it is historical development data in 0.8.2;
+holdout_082.py provides the new, separately retained evaluation wording.
 """
 FAMILIES = {
 'ds': [

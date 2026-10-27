@@ -25,6 +25,7 @@ parser.add_argument('--workdir',default='.tools/ai/full-train')
 parser.add_argument('--report',default='reports/wakuu-full-training.json')
 parser.add_argument('--model-version',default='wakuu-nli-408-dev2')
 parser.add_argument('--seed',type=int,default=408080)
+parser.add_argument('--train-last-layers',type=int,default=2)
 args=parser.parse_args()
 random.seed(args.seed);np.random.seed(args.seed);torch.manual_seed(args.seed)
 torch.set_num_threads(4)
@@ -37,8 +38,10 @@ tokenizer=BertTokenizer(vocab_file=str(ROOT/'.tools/ai/base/vocab.txt'),do_lower
 config=BertConfig.from_pretrained(ROOT/args.checkpoint,local_files_only=True)
 config._attn_implementation='eager'
 model=BertForSequenceClassification.from_pretrained(ROOT/args.checkpoint,config=config,local_files_only=True).to(device)
+if not 1<=args.train_last_layers<=12:raise ValueError('train-last-layers must be 1..12')
+trainable=[f'encoder.layer.{i}.' for i in range(12-args.train_last_layers,12)]+['pooler','classifier']
 for name,p in model.named_parameters():
-    p.requires_grad=any(s in name for s in ('encoder.layer.10.','encoder.layer.11.','pooler','classifier'))
+    p.requires_grad=any(s in name for s in trainable)
 
 def encode(rows):
     return tokenizer([r['premise'] for r in rows],[r['hypothesis'] for r in rows],padding=True,truncation=True,max_length=192,return_tensors='pt')
@@ -94,9 +97,11 @@ import onnx
 from onnxruntime.transformers.float16 import convert_float_to_float16
 graph=convert_float_to_float16(onnx.load(str(fp32)),keep_io_types=True,disable_shape_infer=True)
 onnx.save(graph,str(work/'wakuu.fp16.onnx'))
+corpus_manifest=json.loads((corpus/'manifest.json').read_text(encoding='utf-8'))
 report=dict(model_version=args.model_version,seed=args.seed,device=str(device),epochs=args.epochs,learning_rate=args.learning_rate,checkpoint=args.checkpoint,
+    train_last_layers=args.train_last_layers,
     train_pairs=len(train),development_pairs=len(dev),baseline=baseline,history=history,selected=best[1],
-    elapsed_seconds=time.perf_counter()-started,corpus=json.loads((corpus/'manifest.json').read_text(encoding='utf-8')),
-    limitation='Question-disjoint synthetic reference-derived development; independent authored challenge and test split are evaluated after selection.')
+    elapsed_seconds=time.perf_counter()-started,corpus=corpus_manifest,
+    limitation=corpus_manifest.get('scope','Question-disjoint synthetic reference-derived development; evaluate separately after selection.'))
 (ROOT/args.report).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('EXPORTED',work/'wakuu.fp16.onnx',flush=True)

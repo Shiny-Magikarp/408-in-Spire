@@ -1,0 +1,1040 @@
+{
+  "version": "0.8.2",
+  "date": "2026-10-27",
+  "model_version": "wakuu-nli-408-dev3",
+  "model_sha256": "dd15e6ffc34363b98288dbb3eb49925c99ec469e2fc62fced6606f8f15547afe",
+  "model_bytes": 204768513,
+  "parent_model_version": "wakuu-nli-408-dev2",
+  "parent_sha256": "cd1a655635fec6f9bb33e5b95271212fc550c816489271939ea422bdc73356c3",
+  "weights_changed": true,
+  "scoring_version": "passages-081",
+  "entailment_threshold": 0.85,
+  "contradiction_ceiling": 0.1,
+  "dataset": {
+    "source": "tools/ai/holdout_082.py",
+    "items": 100,
+    "positive": 48,
+    "negative": 52,
+    "subjects": 4,
+    "knowledge_families": 24,
+    "prompt_attacks": 4,
+    "sha256": "dc5864e6b4f99ebc6f3b9a12abed2e24fcea50410f1876631d580e0939b7baf6",
+    "used_for_gradients_or_epoch_or_threshold_selection": false,
+    "used_for_final_promotion_check": true,
+    "nature": "Project-authored new wording, not independent human-marked student essays. Knowledge can overlap prior domain training. Now a fixed regression set."
+  },
+  "baseline": {
+    "total": 100,
+    "positive": 48,
+    "negative": 52,
+    "true_awards": 33,
+    "false_awards": 5,
+    "missed_correct": 15,
+    "correct_rejections": 47,
+    "decision_accuracy": 0.8,
+    "correct_answer_recall": 0.6875,
+    "false_award_rate": 0.09615384615384616
+  },
+  "improved": {
+    "total": 100,
+    "positive": 48,
+    "negative": 52,
+    "true_awards": 44,
+    "false_awards": 4,
+    "missed_correct": 4,
+    "correct_rejections": 48,
+    "decision_accuracy": 0.92,
+    "correct_answer_recall": 0.9166666666666666,
+    "false_award_rate": 0.07692307692307693
+  },
+  "fp16_fp32_award_mismatches": 0,
+  "training": {
+    "pairs": 7128,
+    "development_pairs": 48,
+    "seed": 408082,
+    "learning_rate": 1e-05,
+    "batch_size": 12,
+    "train_last_layers": 4,
+    "epochs": 4,
+    "selected_epoch": 1,
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 0.11354383633014203,
+        "correct": 42,
+        "total": 48,
+        "false_awards": 0,
+        "accepted_correct": 20,
+        "positive_count": 24,
+        "negative_count": 24
+      },
+      {
+        "epoch": 2,
+        "loss": 0.04280918191879476,
+        "correct": 41,
+        "total": 48,
+        "false_awards": 0,
+        "accepted_correct": 18,
+        "positive_count": 24,
+        "negative_count": 24
+      },
+      {
+        "epoch": 3,
+        "loss": 0.03406087487806866,
+        "correct": 37,
+        "total": 48,
+        "false_awards": 2,
+        "accepted_correct": 19,
+        "positive_count": 24,
+        "negative_count": 24
+      },
+      {
+        "epoch": 4,
+        "loss": 0.02921452014406865,
+        "correct": 43,
+        "total": 48,
+        "false_awards": 1,
+        "accepted_correct": 21,
+        "positive_count": 24,
+        "negative_count": 24
+      }
+    ],
+    "data": {
+      "train": {
+        "rows": 7128,
+        "labels": {
+          "0": 1235,
+          "1": 1572,
+          "2": 4321
+        },
+        "sha256": "9a870bd1c13fa57df0165b50bf7b6a7039c6dbbdf194cefbe794d10dc59bac13"
+      },
+      "dev": {
+        "rows": 48,
+        "labels": {
+          "2": 24,
+          "0": 17,
+          "1": 7
+        },
+        "sha256": "3d1736e5ab38b6d26a83a74b90dc870052d2ea4f9062f3e03b699e38b50cd27b"
+      }
+    },
+    "old_081_test_retired_to_development": true,
+    "scope": "Historical development examples plus generated meaning-preserving terminology variants. Fresh 082 holdout is never read by this builder."
+  },
+  "reference_integration": {
+    "questions": 124,
+    "baseline_mean": 97.93548387096774,
+    "baseline_minimum": 59,
+    "improved_mean": 99.10483870967742,
+    "improved_minimum": 83,
+    "scope": "Reference answers only: integration/coverage check, not grading accuracy."
+  },
+  "limitations": [
+    "Small project-authored wording test; no independent human student answer labels.",
+    "Four false awards and four missed correct answers remain.",
+    "Arbitrary code, proofs and diagrams are not verified; process review remains required."
+  ],
+  "records": [
+    {
+      "id": "fresh082-ds-1-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9993202086900215,
+      "dev3_contradiction": 0.0006767306264359312
+    },
+    {
+      "id": "fresh082-ds-1-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9995822127055926,
+      "dev3_contradiction": 0.00041484565591253767
+    },
+    {
+      "id": "fresh082-ds-1-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": true,
+      "dev3_award": false,
+      "dev3_entailment": 0.18033368092966912,
+      "dev3_contradiction": 0.819659072424579
+    },
+    {
+      "id": "fresh082-ds-1-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.03478600771021534,
+      "dev3_contradiction": 0.013830681739378417
+    },
+    {
+      "id": "fresh082-ds-2-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9998654924344303,
+      "dev3_contradiction": 6.763466344505147e-05
+    },
+    {
+      "id": "fresh082-ds-2-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9988117411466632,
+      "dev3_contradiction": 0.0011622900337823043
+    },
+    {
+      "id": "fresh082-ds-2-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.02090367367202703,
+      "dev3_contradiction": 0.9789695462950736
+    },
+    {
+      "id": "fresh082-ds-2-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9916348932963398,
+      "dev3_contradiction": 0.00040957693275658896
+    },
+    {
+      "id": "fresh082-ds-3-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.99984070052367,
+      "dev3_contradiction": 0.0001511720434001176
+    },
+    {
+      "id": "fresh082-ds-3-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0047367265935473815,
+      "dev3_contradiction": 0.995256876552533
+    },
+    {
+      "id": "fresh082-ds-3-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9972655858081075,
+      "dev3_contradiction": 0.0027323291061040595
+    },
+    {
+      "id": "fresh082-ds-3-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 3.952613094354642e-05,
+      "dev3_contradiction": 4.052861811228135e-05
+    },
+    {
+      "id": "fresh082-ds-4-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.625066153316004,
+      "dev3_contradiction": 0.0004114331895682319
+    },
+    {
+      "id": "fresh082-ds-4-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9998226164905792,
+      "dev3_contradiction": 0.00016980504356471415
+    },
+    {
+      "id": "fresh082-ds-4-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": true,
+      "dev3_award": false,
+      "dev3_entailment": 0.05021092038891834,
+      "dev3_contradiction": 0.002476853396756685
+    },
+    {
+      "id": "fresh082-ds-4-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0029006200522010053,
+      "dev3_contradiction": 1.0701381786047553e-05
+    },
+    {
+      "id": "fresh082-ds-5-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.999523301045128,
+      "dev3_contradiction": 0.0004742877874196969
+    },
+    {
+      "id": "fresh082-ds-5-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9998013752386673,
+      "dev3_contradiction": 0.00019376408902832627
+    },
+    {
+      "id": "fresh082-ds-5-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.00011339797924874805,
+      "dev3_contradiction": 0.9998437474440872
+    },
+    {
+      "id": "fresh082-ds-5-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0734324585421345,
+      "dev3_contradiction": 0.00010419576101897395
+    },
+    {
+      "id": "fresh082-ds-6-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9994182548065503,
+      "dev3_contradiction": 0.0005770614573427104
+    },
+    {
+      "id": "fresh082-ds-6-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9996521899212151,
+      "dev3_contradiction": 0.00033946510192308825
+    },
+    {
+      "id": "fresh082-ds-6-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.00013327986983893735,
+      "dev3_contradiction": 0.9998146348838444
+    },
+    {
+      "id": "fresh082-ds-6-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0062768933949674385,
+      "dev3_contradiction": 3.1042821281772846e-05
+    },
+    {
+      "id": "fresh082-ds-injection",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0025959030135405637,
+      "dev3_contradiction": 2.2954501183057303e-05
+    },
+    {
+      "id": "fresh082-co-1-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9996607991084405,
+      "dev3_contradiction": 0.0003321103937503411
+    },
+    {
+      "id": "fresh082-co-1-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9985403295585886,
+      "dev3_contradiction": 0.001455077559828235
+    },
+    {
+      "id": "fresh082-co-1-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 9.835069800660415e-05,
+      "dev3_contradiction": 0.9998271565102547
+    },
+    {
+      "id": "fresh082-co-1-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0006198808306175247,
+      "dev3_contradiction": 0.04949011342345403
+    },
+    {
+      "id": "fresh082-co-2-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.18687190377211987,
+      "dev3_contradiction": 5.009547687666367e-05
+    },
+    {
+      "id": "fresh082-co-2-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9998744832219735,
+      "dev3_contradiction": 0.00010792748812510856
+    },
+    {
+      "id": "fresh082-co-2-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0004000140167879089,
+      "dev3_contradiction": 0.9995885728996594
+    },
+    {
+      "id": "fresh082-co-2-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0003016397333365072,
+      "dev3_contradiction": 2.7953210747388653e-06
+    },
+    {
+      "id": "fresh082-co-3-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9731171423120978,
+      "dev3_contradiction": 0.026871069758624317
+    },
+    {
+      "id": "fresh082-co-3-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.003174665661709928,
+      "dev3_contradiction": 0.996818845499331
+    },
+    {
+      "id": "fresh082-co-3-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9975731528333824,
+      "dev3_contradiction": 0.002422581490916735
+    },
+    {
+      "id": "fresh082-co-3-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 7.707632069695431e-06,
+      "dev3_contradiction": 2.3923691092226975e-06
+    },
+    {
+      "id": "fresh082-co-4-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9065436180220583,
+      "dev3_contradiction": 0.0026058777401951434
+    },
+    {
+      "id": "fresh082-co-4-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9995135602828008,
+      "dev3_contradiction": 0.0004635945204271932
+    },
+    {
+      "id": "fresh082-co-4-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.00014890009569822998,
+      "dev3_contradiction": 0.999491723772369
+    },
+    {
+      "id": "fresh082-co-4-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 2.511474843323909e-06,
+      "dev3_contradiction": 6.016248996182571e-06
+    },
+    {
+      "id": "fresh082-co-5-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9998337323134141,
+      "dev3_contradiction": 5.7496901099207166e-05
+    },
+    {
+      "id": "fresh082-co-5-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9976561554782424,
+      "dev3_contradiction": 0.0023179060439438097
+    },
+    {
+      "id": "fresh082-co-5-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.00011792923652662075,
+      "dev3_contradiction": 0.9998265343603228
+    },
+    {
+      "id": "fresh082-co-5-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 7.419390023361579e-05,
+      "dev3_contradiction": 0.9996584262456262
+    },
+    {
+      "id": "fresh082-co-6-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9996643246429601,
+      "dev3_contradiction": 0.00015384346871131685
+    },
+    {
+      "id": "fresh082-co-6-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9981589204240595,
+      "dev3_contradiction": 0.0018382036764336097
+    },
+    {
+      "id": "fresh082-co-6-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.019183857162043034,
+      "dev3_contradiction": 0.9807877495022379
+    },
+    {
+      "id": "fresh082-co-6-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 2.460117537133364e-05,
+      "dev3_contradiction": 3.909106433484542e-06
+    },
+    {
+      "id": "fresh082-co-injection",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0005103614966643236,
+      "dev3_contradiction": 1.5549304032858893e-05
+    },
+    {
+      "id": "fresh082-os-1-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9997295139192648,
+      "dev3_contradiction": 0.00019858940278827468
+    },
+    {
+      "id": "fresh082-os-1-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9616472975697311,
+      "dev3_contradiction": 0.03834727194703557
+    },
+    {
+      "id": "fresh082-os-1-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0001871698613201684,
+      "dev3_contradiction": 0.9997777624619376
+    },
+    {
+      "id": "fresh082-os-1-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9989318608500944,
+      "dev3_contradiction": 9.180877183205176e-05
+    },
+    {
+      "id": "fresh082-os-2-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9984984093199198,
+      "dev3_contradiction": 0.0014991134564544051
+    },
+    {
+      "id": "fresh082-os-2-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9986095740424384,
+      "dev3_contradiction": 0.0013869935959660762
+    },
+    {
+      "id": "fresh082-os-2-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.30876179326290687,
+      "dev3_contradiction": 0.6912314457340849
+    },
+    {
+      "id": "fresh082-os-2-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 2.103219525859104e-05,
+      "dev3_contradiction": 7.854586509742243e-06
+    },
+    {
+      "id": "fresh082-os-3-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9996966384755025,
+      "dev3_contradiction": 0.00029895276388481663
+    },
+    {
+      "id": "fresh082-os-3-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9998995167740956,
+      "dev3_contradiction": 8.445407894729022e-05
+    },
+    {
+      "id": "fresh082-os-3-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.00015048402264414875,
+      "dev3_contradiction": 0.999810457532182
+    },
+    {
+      "id": "fresh082-os-3-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 9.000425152622272e-05,
+      "dev3_contradiction": 3.882050628202666e-05
+    },
+    {
+      "id": "fresh082-os-4-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9289320525693602,
+      "dev3_contradiction": 0.00046613334841731874
+    },
+    {
+      "id": "fresh082-os-4-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9182296266934579,
+      "dev3_contradiction": 0.06564774443068143
+    },
+    {
+      "id": "fresh082-os-4-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0002600825797266802,
+      "dev3_contradiction": 0.9995966704330512
+    },
+    {
+      "id": "fresh082-os-4-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 6.349959324751587e-06,
+      "dev3_contradiction": 4.294572661742969e-06
+    },
+    {
+      "id": "fresh082-os-5-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9993069548865849,
+      "dev3_contradiction": 0.0006863048017089208
+    },
+    {
+      "id": "fresh082-os-5-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9993688854739592,
+      "dev3_contradiction": 0.0006261376616561557
+    },
+    {
+      "id": "fresh082-os-5-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.0003620283376549417,
+      "dev3_contradiction": 0.9996002542536574
+    },
+    {
+      "id": "fresh082-os-5-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.7351159447080213,
+      "dev3_contradiction": 0.00046110843740460847
+    },
+    {
+      "id": "fresh082-os-6-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9997519196072482,
+      "dev3_contradiction": 0.0002419968313469783
+    },
+    {
+      "id": "fresh082-os-6-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9998737541091489,
+      "dev3_contradiction": 0.00010837566105211473
+    },
+    {
+      "id": "fresh082-os-6-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.545703654862077,
+      "dev3_contradiction": 0.45413568281198174
+    },
+    {
+      "id": "fresh082-os-6-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 7.429929789236746e-06,
+      "dev3_contradiction": 2.7501945689195184e-06
+    },
+    {
+      "id": "fresh082-os-injection",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 4.066856647129604e-06,
+      "dev3_contradiction": 3.2733647374666664e-05
+    },
+    {
+      "id": "fresh082-cn-1-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": false,
+      "dev3_award": true,
+      "dev3_entailment": 0.9991637138878582,
+      "dev3_contradiction": 8.994577971471272e-05
+    },
+    {
+      "id": "fresh082-cn-1-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9997934004388653,
+      "dev3_contradiction": 0.000200794594561802
+    },
+    {
+      "id": "fresh082-cn-1-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.00012185717095548198,
+      "dev3_contradiction": 0.9997669050814161
+    },
+    {
+      "id": "fresh082-cn-1-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.010462638661030955,
+      "dev3_contradiction": 0.0021147816270305647
+    },
+    {
+      "id": "fresh082-cn-2-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9981761241605818,
+      "dev3_contradiction": 0.0018214714338136819
+    },
+    {
+      "id": "fresh082-cn-2-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9990341443537214,
+      "dev3_contradiction": 0.0009513352844848082
+    },
+    {
+      "id": "fresh082-cn-2-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.00887143229747864,
+      "dev3_contradiction": 0.9911192694229587
+    },
+    {
+      "id": "fresh082-cn-2-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 2.1829108928399413e-05,
+      "dev3_contradiction": 1.0614530782502916e-05
+    },
+    {
+      "id": "fresh082-cn-3-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9998100908486138,
+      "dev3_contradiction": 0.00017916337981939222
+    },
+    {
+      "id": "fresh082-cn-3-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9997653508714822,
+      "dev3_contradiction": 0.00022850320537686695
+    },
+    {
+      "id": "fresh082-cn-3-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.00013757965578489167,
+      "dev3_contradiction": 0.9998348881526368
+    },
+    {
+      "id": "fresh082-cn-3-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.7664021297853879,
+      "dev3_contradiction": 0.0001014964853121909
+    },
+    {
+      "id": "fresh082-cn-4-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9998895118233325,
+      "dev3_contradiction": 7.373869911484442e-05
+    },
+    {
+      "id": "fresh082-cn-4-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.999871017875826,
+      "dev3_contradiction": 9.722374421384837e-05
+    },
+    {
+      "id": "fresh082-cn-4-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.00010999992883140772,
+      "dev3_contradiction": 0.9998425825034051
+    },
+    {
+      "id": "fresh082-cn-4-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 4.0970239050170164e-05,
+      "dev3_contradiction": 4.250838512551778e-06
+    },
+    {
+      "id": "fresh082-cn-5-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.999248918124696,
+      "dev3_contradiction": 0.00011533253928159062
+    },
+    {
+      "id": "fresh082-cn-5-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.999453886055703,
+      "dev3_contradiction": 0.000541468525543197
+    },
+    {
+      "id": "fresh082-cn-5-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.00011672000446037747,
+      "dev3_contradiction": 0.9998153541657112
+    },
+    {
+      "id": "fresh082-cn-5-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.00012387254930570332,
+      "dev3_contradiction": 7.412231280234392e-06
+    },
+    {
+      "id": "fresh082-cn-6-0",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9994026560519121,
+      "dev3_contradiction": 0.0005925183080437318
+    },
+    {
+      "id": "fresh082-cn-6-1",
+      "label": 2,
+      "expected_award": true,
+      "baseline_award": true,
+      "dev3_award": true,
+      "dev3_entailment": 0.9978438219767506,
+      "dev3_contradiction": 0.0021521595578871803
+    },
+    {
+      "id": "fresh082-cn-6-2",
+      "label": 0,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 0.2957746153133722,
+      "dev3_contradiction": 0.7041203276538048
+    },
+    {
+      "id": "fresh082-cn-6-3",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 1.2336816628282737e-05,
+      "dev3_contradiction": 2.263894784324323e-06
+    },
+    {
+      "id": "fresh082-cn-injection",
+      "label": 1,
+      "expected_award": false,
+      "baseline_award": false,
+      "dev3_award": false,
+      "dev3_entailment": 3.249535578041666e-06,
+      "dev3_contradiction": 9.908270304427999e-05
+    }
+  ]
+}

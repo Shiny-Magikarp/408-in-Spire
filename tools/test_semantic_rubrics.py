@@ -4,6 +4,8 @@ import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parent/'ai'))
 from full_essay_rubrics import parts,checkpoints
 from marking_families_081 import rows as marking_rows
+from holdout_082 import rows as fresh_rows
+from marking_challenge import rows as historical_diagnostics
 
 class SemanticRubricTests(unittest.TestCase):
     def test_all_sections_keep_weights_and_text(self):
@@ -44,5 +46,20 @@ class SemanticRubricTests(unittest.TestCase):
             book=[r for r in data if r['subject']==subject]
             self.assertEqual(len(book),24)
             self.assertEqual(sum(r['label']==2 for r in book),12)
+
+    def test_fresh_082_wording_does_not_duplicate_historical_pairs(self):
+        historical=marking_rows('train')+marking_rows('dev')+marking_rows('test')+historical_diagnostics()
+        keys=lambda data:{(r['premise'],r['hypothesis']) for r in data}
+        self.assertTrue(keys(fresh_rows()).isdisjoint(keys(historical)))
+
+    def test_fresh_082_contains_four_subjects_and_prompt_attacks(self):
+        data=fresh_rows()
+        self.assertEqual(len(data),100)
+        self.assertEqual(sum(r['label']==2 for r in data),48)
+        for subject in ('ds','co','os','cn'):
+            book=[r for r in data if r['subject']==subject]
+            self.assertEqual(len(book),25)
+            self.assertEqual(sum(r['label']==2 for r in book),12)
+            self.assertEqual(sum('injection' in r['id'] for r in book),1)
 
 if __name__=='__main__':unittest.main()
