@@ -73,7 +73,7 @@ class AcademicChecks(unittest.TestCase):
         main()
         report=json.loads((ROOT/'reports/essay-grading-audit.json').read_text(encoding='utf-8'))
         self.assertEqual(len(report['previous_review_only_items']),169)
-        self.assertEqual(report['new_result_scopes']+report['new_semantic_scopes']+report['remaining_review_only'],169)
+        self.assertEqual(report['new_result_scopes']+report['new_semantic_scopes']+report['remaining_review_only']+report['excluded_drawing'],169)
 
 
 if __name__=='__main__':unittest.main()

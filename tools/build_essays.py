@@ -8,6 +8,7 @@ from pathlib import Path
 import copy
 import sys
 from essay_calculations import rubrics as extended_rubrics
+from essay_scope import POLICY as scope_policy, validate_exclusions
 sys.path.insert(0, str(Path(__file__).resolve().parent/'ai'))
 from full_essay_rubrics import parts as semantic_parts, POLICY_VERSION
 
@@ -143,14 +144,22 @@ def build():
     for id,revision in semantic_policy['unchanged_grading_revisions'].items():
         if by_id[id]['revision']!=revision: raise ValueError('0.7.0 rubric changed without migration: '+id)
     compatible_by_bank={semantic_policy['compatible_bank']:semantic_policy['unchanged_grading_revisions']}
+    removed=validate_exclusions(upstream,questions)
+    for id,revision in scope_policy['compatible_grading_revisions'].items():
+        if by_id[id]['revision']!=revision: raise ValueError('0.8.2 rubric changed without migration: '+id)
+    compatible_by_bank[scope_policy['compatible_bank']]=scope_policy['compatible_grading_revisions']
+    questions=[q for q in questions if q['id'] not in removed]
     target=ROOT/'game/Spire408/Data/essays.json';target.parent.mkdir(parents=True,exist_ok=True)
-    target.write_text(json.dumps(dict(schema=3,compatible_from=quality['compatible_from']+[semantic_policy['compatible_bank']],
-        legacy_grading_revisions=quality['legacy_grading_revisions'],compatible_rubrics_by_bank=compatible_by_bank,questions=questions),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    counts=dict(total=len(questions),imported=len(upstream),original=len(originals),
-                automatic=len(questions),review_only=0,deterministic_imported=len(reviewed),experimental_semantic=len(upstream)-len(reviewed),
+    target.write_text(json.dumps(dict(schema=3,compatible_from=quality['compatible_from']+list(compatible_by_bank),
+        legacy_grading_revisions=quality['legacy_grading_revisions'],compatible_rubrics_by_bank=compatible_by_bank,
+        removed_grading_revisions={id:by_id[id]['revision'] for id in sorted(removed)},questions=questions),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    counts=dict(total=len(questions),imported=len(questions)-len(originals),source_imported=len(upstream),excluded_drawing=len(removed),original=len(originals),
+                automatic=len(questions),review_only=0,deterministic_imported=sum(not q.get('experimental') and q['id'].startswith('cs408-') for q in questions),
+                experimental_semantic=sum(bool(q.get('experimental')) for q in questions),
                 subjects=dict(Counter(q['subject'] for q in questions)))
     counts['local_errata']=list(quality['corrections'])
-    counts['new_result_scopes']=list(extended_rubrics(json.loads((ROOT/'data/essay-upstream.json').read_text(encoding='utf-8'))['questions']))
+    counts['new_result_scopes']=[id for id in extended_rubrics(json.loads((ROOT/'data/essay-upstream.json').read_text(encoding='utf-8'))['questions']) if 'cs408-'+id not in removed]
+    counts['excluded_questions']={id:rule['reason'] for id,rule in scope_policy['exclusions'].items()}
     (ROOT/'reports/essay-bank-report.json').write_text(json.dumps(counts,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(counts,ensure_ascii=True))
 

@@ -53,6 +53,8 @@ def main():
     report = {
         "version": version, "date": date.today().isoformat(),
         "questions": len(bank["questions"]), "essays": essays,
+        "essay_scope": {"policy": "tools/essay-scope-policy.json", "excluded_drawing": essays["excluded_drawing"],
+                        "supports_drawing_answers": False, "evaluation_document": "docs/WORKSHOP-READINESS.md"},
         "core_checks": int(re.search(r"(\d+) checks passed", core)[1]),
         "import_tests": int(re.search(r"Ran (\d+) tests", imports)[1]),
         "game_checks": int(re.search(r"COMPLETE (\d+) checks", game)[1]),

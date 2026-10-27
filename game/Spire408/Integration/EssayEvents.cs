@@ -119,6 +119,7 @@ public static class EssayEvents
             string? questionId = prior?.QuestionId ?? run.EssayDeck.ElementAtOrDefault(run.EssayCursor);
             bool needsModel = ModEntry.Essays.Questions.FirstOrDefault(q => q.Id == questionId)?.Parts.Any(p => p.Kind is "concept" or "rubric") == true;
             string reason = !run.Settings.Essays ? "本局未启用大题" : run.EssayBankHash != ModEntry.Essays.Hash ? "大题库版本与存档不一致"
+                : !paid && questionId != null && ModEntry.Essays.RemovedGradingRevisions.ContainsKey(questionId) ? "该绘图题已移除，请选择离开；后续事件使用保留题目"
                 : !hasQuestion ? "当前筛选没有剩余大题" : needsModel && !WakuuJudge.FilesPresent ? "瓦库离线模型未安装" : paid ? "本事件已结算大题奖励" : "";
             var title = new LocString("events", "SPIRE408_CHALLENGE.title");
             var body = new LocString("events", reason.Length == 0 ? "SPIRE408_CHALLENGE.description" : "SPIRE408_CHALLENGE.locked");

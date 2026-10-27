@@ -3,6 +3,7 @@ from pathlib import Path
 import unittest
 from import_essays import LiteralParser, parse_questions
 from build_essays import rubrics
+from essay_scope import POLICY as scope_policy, validate_exclusions
 
 class EssayImportTests(unittest.TestCase):
     def test_literal_data_and_escapes(self):
@@ -19,14 +20,27 @@ class EssayImportTests(unittest.TestCase):
         bank=json.loads((root/'game/Spire408/Data/essays.json').read_text(encoding='utf-8'))['questions']
         imported={q['id']:q for q in bank if q['id'].startswith('cs408-')}
         errata=json.loads((root/'tools/essay-quality-policy.json').read_text(encoding='utf-8'))['corrections']
-        self.assertEqual(len(imported),196)
+        self.assertEqual(len(imported),187)
+        self.assertEqual(set(imported),{'cs408-'+q['id'] for q in source if q['id'] not in scope_policy['exclusions']})
         for q in source:
+            if q['id'] in scope_policy['exclusions']:continue
             item=imported['cs408-'+q['id']]
             patches=errata.get(q['id'],{}).get('fields',{})
             self.assertEqual(item['reference_answer'],patches.get('answerText',{}).get('replacement',q['answerText']))
             self.assertEqual(item['explanation'],patches.get('explanation',{}).get('replacement',q['explanation']))
             self.assertIn(q['question'],item['stem'])
             self.assertEqual(item['original_points'],q['score'])
+    def test_drawing_exclusions_reject_changed_source(self):
+        root=Path(__file__).resolve().parents[1]
+        source=json.loads((root/'data/essay-upstream.json').read_text(encoding='utf-8'))['questions']
+        built=[dict(id='cs408-'+id,revision=rule['expected_revision']) for id,rule in scope_policy['exclusions'].items()]
+        self.assertEqual(len(validate_exclusions(source,built)),9)
+        next(q for q in source if q['id']=='mock05-41')['question']+='changed'
+        with self.assertRaisesRegex(ValueError,'Changed excluded drawing source'):validate_exclusions(source,built)
+    def test_graph_algorithms_and_merge_calculations_are_retained(self):
+        root=Path(__file__).resolve().parents[1]
+        bank={q['id'] for q in json.loads((root/'game/Spire408/Data/essays.json').read_text(encoding='utf-8'))['questions']}
+        self.assertTrue({'cs408-q-2025-41','cs408-q-2020-41','cs408-q-2016-41','cs408-mock06-42','cs408-mock10-41'}<=bank)
     def test_independent_calculation_checks(self):
         # Independent small solvers check the hand-authored final-result keys.
         import heapq

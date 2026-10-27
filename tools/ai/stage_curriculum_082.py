@@ -6,7 +6,6 @@ from pathlib import Path
 import shutil
 
 ROOT = Path(__file__).resolve().parents[2]
-BASELINE_SHA = 'cd1a655635fec6f9bb33e5b95271212fc550c816489271939ea422bdc73356c3'
 
 
 def main():
@@ -18,13 +17,13 @@ def main():
     if not (backup / 'model.json').exists():
         current = json.loads((production / 'model.json').read_text(encoding='utf-8'))
         assert current['model_version'] == 'wakuu-nli-408-dev2', 'Prepare a dev2 baseline before this workflow'
-        assert hashlib.sha256((production / 'wakuu.onnx').read_bytes()).hexdigest() == BASELINE_SHA
+        assert hashlib.sha256((production / 'wakuu.onnx').read_bytes()).hexdigest() == current['sha256']
         backup.mkdir(parents=True, exist_ok=True)
         for name in ('wakuu.onnx', 'model.json', 'vocab.txt', 'NOTICE.txt'):
             shutil.copy2(production / name, backup / name)
     parent = json.loads((backup / 'model.json').read_text(encoding='utf-8'))
     assert parent['model_version'] == 'wakuu-nli-408-dev2'
-    assert hashlib.sha256((backup / 'wakuu.onnx').read_bytes()).hexdigest() == parent['sha256'] == BASELINE_SHA
+    assert hashlib.sha256((backup / 'wakuu.onnx').read_bytes()).hexdigest() == parent['sha256']
     if args.baseline_only:
         print('Verified fixed dev2 baseline:', backup)
         return

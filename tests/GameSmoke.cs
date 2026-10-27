@@ -99,7 +99,7 @@ internal static class GameSmoke
             bool configured = false;
             ModEntry.ShowSetup(() => configured = true);
             var setup = (StudySetup)NModalContainer.Instance!.OpenModal!;
-            Check(setup.CountLabel.Text.Contains("1,676") && setup.CountLabel.Text.Contains("可核分 204 / 实验 124"), "scene bindings and complete grading coverage counts");
+            Check(setup.CountLabel.Text.Contains("1,676") && setup.CountLabel.Text.Contains("可核分 195 / 实验 118"), "scene bindings and retained grading coverage counts");
             Check(setup.StartButton is NPopupYesNoButton && setup.DataStructures is NTickbox
                 && setup.SourceFilter is MegaCrit.Sts2.Core.Nodes.Screens.Settings.NSettingsDropdown
                 && setup.LibraryButton is MegaCrit.Sts2.Core.Nodes.Screens.Settings.NSettingsButton,
@@ -133,7 +133,8 @@ internal static class GameSmoke
             setup.LibraryButton.Activate();
             await Wait(() => NModalContainer.Instance!.OpenModal is EssayLibrary, "essay library opens from pre-run plan");
             var library = (EssayLibrary)NModalContainer.Instance!.OpenModal!;
-            Check(library.MatchingCount == 204, "pre-run library exposes all imported essays plus original exercises");
+            Check(library.MatchingCount == 195, "pre-run library exposes retained essays plus original exercises");
+            Check(!ModEntry.Essays.Questions.Any(q=>ModEntry.Essays.RemovedGradingRevisions.ContainsKey(q.Id)), "retired drawing questions are absent from the game library and event pool");
             await Tree.ToSignal(Tree, SceneTree.SignalName.ProcessFrame);
             Check(library.GetGlobalRect().Encloses(library.QuestionSelect.GetGlobalRect()) && library.QuestionSelect.Size.X > 600,
                 "native question selector remains inside the editor-authored library panel");

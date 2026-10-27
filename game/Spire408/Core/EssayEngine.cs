@@ -13,6 +13,7 @@ public sealed class EssayBank
     public List<string> CompatibleFrom { get; set; } = [];
     public Dictionary<string,string> LegacyGradingRevisions { get; set; } = [];
     public Dictionary<string, Dictionary<string,string>> CompatibleRubricsByBank { get; set; } = [];
+    public Dictionary<string,string> RemovedGradingRevisions { get; set; } = [];
     [JsonIgnore] public string Hash { get; private set; } = "";
     public static EssayBank Parse(string json)
     {
@@ -123,10 +124,17 @@ public static class EssayEngine
         if (run.EssayBankHash == bank.Hash || !bank.CompatibleFrom.Contains(run.EssayBankHash)) return false;
         var byId = bank.Questions.ToDictionary(q => q.Id);
         var revisions = bank.CompatibleRubricsByBank.GetValueOrDefault(run.EssayBankHash) ?? bank.LegacyGradingRevisions;
+        bool Unchanged(string id) => revisions.TryGetValue(id, out string? revision)
+            && (byId.TryGetValue(id, out var question) ? question.Revision == revision
+                : bank.RemovedGradingRevisions.TryGetValue(id, out string? removedRevision) && removedRevision == revision);
         if (run.EssayCursor < 0 || run.EssayCursor > run.EssayDeck.Count
-            || run.EssayDeck.Concat(run.EssayEvents.Values.Select(e => e.QuestionId)).Any(id =>
-                !byId.TryGetValue(id, out var q) || !revisions.TryGetValue(id, out string? revision) || q.Revision != revision))
+            || run.EssayDeck.Concat(run.EssayEvents.Values.Select(e => e.QuestionId)).Any(id => !Unchanged(id)))
             throw new InvalidDataException("旧局的大题评分细则不在已验证的兼容范围内。");
+        // Remove both consumed and future retired entries, preserving the order
+        // and position of surviving questions. Event ledgers keep prior payouts.
+        int cursor = run.EssayDeck.Take(run.EssayCursor).Count(byId.ContainsKey);
+        run.EssayDeck = run.EssayDeck.Where(byId.ContainsKey).ToList();
+        run.EssayCursor = cursor;
         run.EssayBankHash = bank.Hash;
         return true;
     }
@@ -190,7 +198,7 @@ public static class EssayEngine
                 grade.Earned = awarded * part.Points / part.Checks.Count;
                 grade.Status = uncertain > 0 ? "review" : awarded == part.Checks.Count ? "awarded" : "partial";
                 grade.Feedback = $"实验性核分：命中 {awarded}/{part.Checks.Count} 个参考评分点" + (uncertain > 0 ? $"，{uncertain} 项待复核" : "")
-                    + (question.RequiresProcessReview ? "；未验证代码执行、证明或绘图过程" : "");
+                    + (question.RequiresProcessReview ? "；未验证代码执行或证明过程" : "");
                 result.NeedsReview |= uncertain > 0;
             }
             else if (part.Kind != "concept")

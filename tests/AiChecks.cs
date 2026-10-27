@@ -71,7 +71,7 @@ internal static class AiChecks
         }
         File.WriteAllText(Path.Combine(root,"reports/wakuu-canonical-integration.json"),JsonSerializer.Serialize(new{questions=canonical,minimum,mean=(double)scoreSum/Math.Max(1,canonical),
             scope="Reference answers only: integration/coverage check, not grading accuracy."}));
-        Check(canonical==124 && minimum>0,"all 124 newly graded essays execute their complete semantic checkpoint pipeline");
+        Check(canonical==118 && minimum>0,"all 118 retained semantic essays execute their complete checkpoint pipeline");
         string freshPath=Path.Combine(root,".tools/ai/holdout-082.json");
         if(File.Exists(freshPath) && WakuuJudge.Version.StartsWith("wakuu-nli-408-dev3",StringComparison.Ordinal))
         {
